@@ -10,9 +10,11 @@ import SwiftUI
 
 @main
 struct clientAppApp: App {
+    @StateObject var userAuth: UserAuthModel =  UserAuthModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            MainView()
+        }.environmentObject(userAuth)
     }
 }
