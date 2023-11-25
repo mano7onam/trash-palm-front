@@ -13,20 +13,34 @@ struct CreateGarbageTagView: View {
 	let place: Place
 	
 	@State private var comment = ""
+	@FocusState private var commentIsFocused: Bool
+	@EnvironmentObject private var appState: AppState
 	
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
 				Spacer()
-				Circle()
-					.fill(Color(hue: 0, saturation: 0, brightness: 0.85))
-					.frame(width: 38, height: 38)
-					.padding(.trailing, 21)
+				
+				AsyncImage(url: URL(string: appState.profilePicUrl)) { phase in
+					switch phase {
+						case .empty, .failure: 
+							Image("AccountPlaceholder")
+						case let .success(image):
+							image
+								.resizable()
+								.scaledToFit()
+								.frame(width: 40)
+								.clipShape(Circle())
+						@unknown default:
+							Image("AccountPlaceholder")
+					}
+				}
+				.padding(.trailing)
 				
 			}
 			.overlay(alignment: .bottom) {
 				Text("Add new trash")
-					.font(.custom("Alata-Regular", fixedSize: 24))
+					.font(.custom("Alata", fixedSize: 24))
 			}
 			
 			RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -34,7 +48,7 @@ struct CreateGarbageTagView: View {
 				.overlay(alignment: .bottom) {
 					Text("Add Photo")
 						.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
-						.font(.custom("Khula-Regular", fixedSize: 16))
+						.font(.custom("Khula", fixedSize: 16))
 						.padding(.bottom, 24)
 				}
 				.overlay {
@@ -48,69 +62,40 @@ struct CreateGarbageTagView: View {
 				.padding(.vertical, 44)
 			
 			
-			//				TextField(text: $comment, prompt: Text("Comment"), axis: .vertical) {
-			//					EmptyView()
-			//				}
-			//				.frame(maxHeight: 165)
-			//				.padding(10)
-			//				.background(
-			//					Color(hue: 0, saturation: 0, brightness: 0.85),
-			//					in: RoundedRectangle(cornerRadius: 20)
-			//				)
-			TextView(text: $comment)
+			ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+				RoundedRectangle(cornerRadius: 20)
+					.inset(by: 0.5)
+					.stroke(Color(hue: 0.67, saturation: 0.1, brightness: 0.52), lineWidth: 1)
+				
+				TextField(text: $comment, prompt: Text("Comment"), axis: .vertical) {
+					EmptyView()
+				}
+				.focused($commentIsFocused)
+				.font(.custom("Khula", fixedSize: 16))
 				.padding(10)
-				.frame(height: 165)
-				.background(
-					Color(hue: 0, saturation: 0, brightness: 0.85),
-					in: RoundedRectangle(cornerRadius: 20)
-				)
-				.padding(.horizontal, 23)
-				.padding(.bottom, 14)
+				.toolbar {
+					ToolbarItem(placement: .keyboard) {
+						HStack {
+							Spacer()
+							Button("Done") { commentIsFocused = false }
+						}
+					}
+				}
+			}
+			.frame(height: 124)
+			.padding(.horizontal, 23)
+			.padding(.bottom, 14)
 			
+			Text("Donate")
+				.font(.custom("Alata", fixedSize: 18))
+				.frame(width: 136, height: 44)
+				.background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
 			
 			Spacer()
 		}
 		.padding(.top, 18)
 	}
 }
-
-struct TextView: UIViewRepresentable {
-	@Binding var text: String
-	
-	func makeUIView(context: Context) -> UITextView {
-		let view = UITextView(frame: .zero)
-		view.backgroundColor = .clear
-		view.text = text
-		view.font = .systemFont(ofSize: 17)
-		view.delegate = context.coordinator
-		return view
-	}
-	
-	func updateUIView(_ uiView: UITextView, context: Context) {
-		uiView.text = text
-	}
-	
-	func makeCoordinator() -> Coordinator {
-		Coordinator(parent: self)
-	}
-	
-	final class Coordinator: NSObject, UITextViewDelegate {
-		let parent: TextView
-		
-		init(parent: TextView) {
-			self.parent = parent
-		}
-		
-		func textViewDidChange(_ textView: UITextView) {
-			if let text = textView.text {
-				parent.text = text
-			} else {
-				parent.text = ""
-			}
-		}
-	}
-}
-
 
 #Preview {
 	CreateGarbageTagView(place: Place(name: "Preview", coordinate: CLLocationCoordinate2D(latitude: 57, longitude: 35)))
