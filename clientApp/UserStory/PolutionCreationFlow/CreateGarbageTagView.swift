@@ -15,15 +15,37 @@ struct CreateGarbageTagView: View {
 	@State private var comment = ""
 	@FocusState private var commentIsFocused: Bool
 	@EnvironmentObject private var appState: AppState
+	@State private var showActionsSheet = false
 	
 	var body: some View {
+		ZStack(alignment: .bottom) {
+			main
+				.blur(radius: showActionsSheet ? 4 : 0)
+				.allowsHitTesting(!showActionsSheet)
+			
+			if showActionsSheet {
+				Color.white.opacity(0.01)
+					.onTapGesture {
+						withAnimation {
+							showActionsSheet = false
+						}
+					}
+				
+				sheet
+			}
+			
+		}
+		.padding(.top, 18)
+	}
+	
+	var main: some View {
 		VStack(spacing: 0) {
 			HStack {
 				Spacer()
 				
 				AsyncImage(url: URL(string: appState.profilePicUrl)) { phase in
 					switch phase {
-						case .empty, .failure: 
+						case .empty, .failure:
 							Image(.accountPlaceholder)
 						case let .success(image):
 							image
@@ -40,31 +62,34 @@ struct CreateGarbageTagView: View {
 			}
 			.overlay(alignment: .bottom) {
 				Text("Add new trash")
-					.font(.custom("Alata", fixedSize: 24))
+					.font(.alata(fixedSize: 24))
 			}
 			
-			RoundedRectangle(cornerRadius: 20, style: .continuous)
-				.fill(Color(hue: 0.283, saturation: 0.04, brightness: 1))
-				.overlay(alignment: .bottom) {
-					Button {
-						print("open action sheet")
-					} label: {
+			Button {
+				commentIsFocused = false
+				withAnimation {
+					showActionsSheet = true
+				}
+			} label: {
+				RoundedRectangle(cornerRadius: 20, style: .continuous)
+					.fill(Color(hue: 0.283, saturation: 0.04, brightness: 1))
+					.overlay(alignment: .bottom) {
 						Text("Add Photo")
 							.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
-							.font(.custom("Khula", fixedSize: 16))
+							.font(.khula(fixedSize: 16))
 							.padding(.bottom, 24)
 					}
-					.buttonStyle(.plain)
-				}
-				.overlay {
-					Image(.camera)
-						.resizable()
-						.scaledToFit()
-						.padding(EdgeInsets(top: 28, leading: 29, bottom: 66, trailing: 48))
-				}
-				.frame(height: 310)
-				.padding(.horizontal, 45)
-				.padding(.vertical, 44)
+					.overlay {
+						Image(.camera)
+							.resizable()
+							.scaledToFit()
+							.padding(EdgeInsets(top: 28, leading: 29, bottom: 66, trailing: 48))
+					}
+					.frame(height: 310)
+					.padding(.horizontal, 45)
+					.padding(.vertical, 44)
+			}
+			.buttonStyle(.plain)
 			
 			
 			ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
@@ -76,7 +101,7 @@ struct CreateGarbageTagView: View {
 					EmptyView()
 				}
 				.focused($commentIsFocused)
-				.font(.custom("Khula", fixedSize: 16))
+				.font(.khula(fixedSize: 16))
 				.padding(10)
 				.toolbar {
 					ToolbarItem(placement: .keyboard) {
@@ -91,14 +116,63 @@ struct CreateGarbageTagView: View {
 			.padding(.horizontal, 23)
 			.padding(.bottom, 29)
 			
-			Text("Donate")
-				.font(.custom("Alata", fixedSize: 18))
-				.frame(width: 136, height: 44)
-				.background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
+			Button {
+				print("open donate")
+			} label: {
+				Text("Donate")
+					.font(.alata(fixedSize: 18))
+					.frame(width: 136, height: 44)
+					.background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
+			}
+			.buttonStyle(.plain)
 			
 			Spacer()
 		}
-		.padding(.top, 18)
+		
+	}
+	
+	var sheet: some View {
+		VStack(spacing: 0) {
+			Text("Add photo")
+				.font(.alata(fixedSize: 24))
+				.padding(.top, 33)
+				.padding(.bottom, 57)
+			
+			Button {
+				print("open camera")
+			} label: {
+				RoundedRectangle(cornerRadius: 13)
+					.stroke(Color(hex: "787885"), lineWidth: 1)
+					.frame(height: 53)
+					.overlay(alignment: .leading) {
+						Text("Use camera")
+							.font(.khula(fixedSize: 16))
+							.foregroundStyle(Color.black)
+							.padding(.leading, 20)
+					}
+			}
+			.buttonStyle(.plain)
+			.padding(.bottom, 55)
+			
+			Button {
+				print("open galery")
+			} label: {
+				RoundedRectangle(cornerRadius: 13)
+					.stroke(Color(hex: "787885"), lineWidth: 1)
+					.frame(height: 53)
+					.overlay(alignment: .leading) {
+						Text("Choose from library")
+							.font(.khula(fixedSize: 16))
+							.foregroundStyle(Color.black)
+							.padding(.leading, 20)
+					}
+			}
+			.buttonStyle(.plain)
+			.padding(.bottom, 55)
+		}
+		.background(Color.white)
+		.padding(.horizontal, 10)
+		.transition(.move(edge: .bottom))
 	}
 }
 
