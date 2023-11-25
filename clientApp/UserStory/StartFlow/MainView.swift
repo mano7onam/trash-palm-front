@@ -9,19 +9,19 @@
 import SwiftUI
 
 struct MainView: View {
-  @EnvironmentObject var vm: AppState
-  
-  var body: some View {
-      ZStack {
-        if vm.isLoggedIn {
-          if vm.onboardingPassed {
-            TabBarView().transition(.opacity)
-          } else {
-            OnboardingView()
-          }
-        } else {
-          LoginView().padding()
-        }
-      }
-    }
+	@EnvironmentObject var vm: AppState
+	
+	var body: some View {
+		ZStack {
+			if vm.isLoggedIn {
+				if vm.onboardingPassed {
+					TabBarView().transition(.opacity)
+				} else {
+					OnboardingView()
+				}
+			} else {
+				LoginView().padding()
+			}
+		}
+	}
 }

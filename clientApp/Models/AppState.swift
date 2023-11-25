@@ -5,26 +5,24 @@
 // Created by Stanislav Zelikson on 25/11/2023.
 //
 
-import Foundation
+import SwiftUI
 
 class AppState: ObservableObject {
-  // Services
-  
-  lazy var authService = AuthService(state: self)
-  
-  // UserAuth
-  @Published var givenName: String = ""
-  @Published var login: String = ""
-  @Published var profilePicUrl: String = ""
-  @Published var isLoggedIn: Bool = false
-  @Published var errorMessage: String = ""
-  
-  // Settings
-  @Published var onboardingPassed: Bool
-  
-  init() {
-    @UserDefault("onboardingPassed", defaultValue: false) var onboardingPassed: Bool
-    self.onboardingPassed = onboardingPassed
-    authService.check()
-  }
+	// Services
+	
+	lazy var authService = AuthService(state: self)
+	
+	// UserAuth
+	@Published var givenName: String = ""
+	@Published var login: String = ""
+	@Published var profilePicUrl: String = ""
+	@AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+	@Published var errorMessage: String = ""
+	
+	// Settings
+	@AppStorage("onboardingPassed") var onboardingPassed: Bool = false
+	
+	init() {
+		authService.check()
+	}
 }
