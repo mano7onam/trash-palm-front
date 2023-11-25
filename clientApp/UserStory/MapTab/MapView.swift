@@ -9,8 +9,6 @@ import Foundation
 import MapKit
 import SwiftUI
 
-
-
 struct MapView: View {
 	enum ActiveSheet: String, Identifiable {
 		case details
@@ -19,10 +17,16 @@ struct MapView: View {
 			rawValue
 		}
 	}
+    struct MapSelection: Identifiable {
+		var selectedPlace: Place
+		var activeSheet: ActiveSheet
+        var id: String {
+            activeSheet.rawValue
+        }
+	}
 	let places: [Place]
-	@State private var selectedPlace: Place?
-	@State private var activeSheet: ActiveSheet?
 	
+	@State private var selection: MapSelection?
 	
 	@State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
 	
@@ -33,11 +37,7 @@ struct MapView: View {
 				.frame(width: 20, height: 20)
 				.highPriorityGesture(
 					TapGesture().onEnded {
-						selectedPlace = place
-						Task {
-							try await Task.sleep(nanoseconds: (1 * NSEC_PER_SEC))
-							activeSheet = .details
-						}
+						selection = .init(selectedPlace: place, activeSheet: .details)
 					}
 				)
 		}
@@ -52,22 +52,21 @@ struct MapView: View {
 					}
 				}
 				.onTapGesture { location in
+                    guard selection == nil else { return }
 					guard let pinLocation = reader.convert(location, from: .local) else { return }
-					selectedPlace = Place(name: "", coordinate: pinLocation)
-					activeSheet = .creation
+					let place = Place(name: "", coordinate: pinLocation)
+					selection = .init(selectedPlace: place, activeSheet: .creation)
 				}
-				.sheet(item: $selectedPlace) { selectedPlace in
-					switch activeSheet {
-						case .creation:
-							NavigationView {
-								CreateGarbageTagView()
-							}
-						case .details:
-							NavigationView {
-								GarbageDetails(place: selectedPlace)
-							}
-						case .none:
-							EmptyView()
+				.sheet(item: $selection) { selectedPlace in
+					switch selectedPlace.activeSheet {
+					case .creation:
+						NavigationView {
+							CreateGarbageTagView()
+						}
+					case .details:
+						NavigationView {
+							GarbageDetails(place: selectedPlace.selectedPlace)
+						}
 					}
 				}
 			}
