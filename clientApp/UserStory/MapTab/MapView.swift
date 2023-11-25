@@ -17,12 +17,15 @@ var mockAnnotations = [
 ]
 
 struct MapView: View {
-  
+  enum ActiveSheet: String, Identifiable {
+    case details
+    case creation
+    var id: String {
+      rawValue
+    }
+  }
   @State private var selectedPlace: Place?
-  @State private var creationPlace: Place?
-  
-  @State private var showingDetails = false
-  @State private var showingCreation = false
+  @State private var activeSheet: ActiveSheet?
   
   var places: [Place]
   
@@ -36,8 +39,10 @@ struct MapView: View {
         .highPriorityGesture(
           TapGesture().onEnded {
             selectedPlace = place
-            showingDetails = true
-            showingCreation = false
+              Task {
+                try await Task.sleep(nanoseconds: (1 * NSEC_PER_SEC))
+                activeSheet = .details
+              }
           }
         )
     }
@@ -52,24 +57,29 @@ struct MapView: View {
           }
         }
         .onTapGesture { location in
-          guard showingDetails == false else { return }
           guard let pinLocation = reader.convert(location, from: .local) else { return }
-          creationPlace = Place(name: "", coordinate: pinLocation)
-          showingDetails = false
-          showingCreation = true
-        }
-        .sheet(isPresented: $showingDetails) {
-          if let selectedPlace = selectedPlace {
-            NavigationView {
-              GarbageDetails(place: selectedPlace)
+            Task { @MainActor in
+              selectedPlace = Place(name: "", coordinate: pinLocation)
+              activeSheet = .creation
             }
+        }
+        .sheet(item: $activeSheet) { item in
+          if let selectedPlace = selectedPlace {
+            switch item {
+            case .creation:
+              NavigationView {
+                CreateGarbageTagView()
+              }
+            case .details:
+              NavigationView {
+                GarbageDetails(place: selectedPlace)
+              }
+            }
+          } else {
+              Text("Internal error, try again!!!")
           }
         }
-        .sheet(isPresented: $showingCreation) {
-          if let creationPlace = creationPlace {
-            GarbageDetails(place: creationPlace)
-          }
-        }
+
       }
       HeaderView()
     }

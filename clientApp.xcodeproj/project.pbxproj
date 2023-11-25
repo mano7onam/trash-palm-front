@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B928002D6C1116337815165F /* clientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */; };
+		B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */; };
 		B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */; };
 		B9280245EF53C17A8BE2B69B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92807D9F1DFC91FC4107473 /* Preview Assets.xcassets */; };
 		B92802DDFB27742A2DBD1124 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92802C1DA3611136D2D5A6C /* HeaderView.swift */; };
@@ -39,6 +40,7 @@
 		B92802C1DA3611136D2D5A6C /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B92802D1C43B531F4D993DE2 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGarbageTagView.swift; sourceTree = "<group>"; };
 		B92804CF6E5B03DEBFF8BBF3 /* ImagePickingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickingView.swift; sourceTree = "<group>"; };
 		B92807D041F4DB1B078ABF52 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B92807D9F1DFC91FC4107473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				B9280531D18AD3F815A6E975 /* StartFlow */,
 				B92802AAC2A2B6B63B3C09A2 /* MapTab */,
 				B92801B4862E893B6C4FCB05 /* CommonUI */,
+				B9280497FA255FC0F5CE99E5 /* PolutionCreationFlow */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -114,6 +117,14 @@
 				B9280BA1FB7B1519F8B7F4BC /* Models */,
 			);
 			path = clientApp;
+			sourceTree = "<group>";
+		};
+		B9280497FA255FC0F5CE99E5 /* PolutionCreationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */,
+			);
+			path = PolutionCreationFlow;
 			sourceTree = "<group>";
 		};
 		B9280531D18AD3F815A6E975 /* StartFlow */ = {
@@ -256,6 +267,7 @@
 				B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */,
 				B92806C0BA507BEC87094404 /* ImagePickingView.swift in Sources */,
 				B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */,
+				B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
