@@ -41,7 +41,7 @@ struct LoginView: View {
                 .bold()
                 .padding()
                 .frame(minWidth: 300)
-                .background(Color.green)
+                .background(Color(uiColor: .olive))
                 .foregroundColor(.white)
                 .cornerRadius(10)
       }
@@ -62,7 +62,7 @@ struct LoginView: View {
                   .bold()
                   .padding()
                   .frame(minWidth: 300)
-                  .background(Color.green)
+                  .background(Color(uiColor: .olive))
                   .foregroundColor(.white)
                   .cornerRadius(10)
         }
@@ -75,7 +75,7 @@ struct LoginView: View {
                   .bold()
                   .padding()
                   .frame(minWidth: 300)
-                  .background(Color.green)
+                  .background(Color(uiColor: .olive))
                   .foregroundColor(.white)
                   .cornerRadius(10)
         }

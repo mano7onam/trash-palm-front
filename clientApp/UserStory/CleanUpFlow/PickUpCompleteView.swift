@@ -33,7 +33,7 @@ struct PickUpCompleteView: View {
         Text("Finish")
           .bold()
           .padding()
-          .background(Color.green)
+          .background(Color(uiColor: .olive))
           .foregroundColor(.white)
           .cornerRadius(10)
           .frame(minWidth: 300)

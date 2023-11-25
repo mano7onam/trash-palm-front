@@ -31,7 +31,7 @@ struct PickUpGarbageView: View {
           .bold()
           .padding()
           .frame(minWidth: 300)
-          .background(Color.green)
+          .background(Color(uiColor: .olive))
           .foregroundColor(.white)
           .cornerRadius(10)
       }

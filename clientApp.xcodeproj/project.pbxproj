@@ -25,15 +25,19 @@
 		B92806C0BA507BEC87094404 /* ImagePickingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804CF6E5B03DEBFF8BBF3 /* ImagePickingView.swift */; };
 		B9280702288E030A226F756F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807D041F4DB1B078ABF52 /* AuthService.swift */; };
 		B928091906FE8819DE3A9DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */; };
+		B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280EE8AF43D31AA6AF9925 /* Colors.swift */; };
 		B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280C0A1ED174034AFDA662 /* PickUpCompleteView.swift */; };
 		B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92802D1C43B531F4D993DE2 /* MapView.swift */; };
 		B9280B7BFD639999DDFA4E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92800B54CE0A13B12E3F3F6 /* TabBarView.swift */; };
-		B9280C6930C98DA28C01EC58 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280B04F82E700A992C706B /* ProfileView.swift */; };
+		B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92801D2765D2ADADC09AB50 /* Fonts.swift */; };
 		B9280CC5BD04F2D043F7EC23 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280250ED6A531E8AE7234F /* UserDefaults.swift */; };
+		B9280D755092347F8E00E991 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280C16B8D8E56AEB31E06C /* ChartsView.swift */; };
 		B9280DB2E4F595E5D5286095 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92801E688C614FD2722D2D1 /* MainView.swift */; };
 		B9280E318837F2729CA791B4 /* GarbageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280A2488116BFB1DBB9AA7 /* GarbageDetails.swift */; };
 		B9280EF949DFC42D6C940BF6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92802539056A15A1F717818 /* OnboardingView.swift */; };
 		B9280F524033A56CDA4E5294 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928082E2694C2422ACA3F9D /* LoginView.swift */; };
+		B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280A7146370E459B3FEB02 /* ProfileView.swift */; };
+		C92DD0CA2B1283BF002C242B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = C92DD0C92B1283BF002C242B /* SwiftUICharts */; };
 		C93888702B11EC0600297C7B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C938886F2B11EC0600297C7B /* GoogleSignIn */; };
 		C93888722B11EC0600297C7B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C93888712B11EC0600297C7B /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
@@ -50,6 +54,7 @@
 		B92800B54CE0A13B12E3F3F6 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B92800CE2887044763913A0A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientAppApp.swift; sourceTree = "<group>"; };
+		B92801D2765D2ADADC09AB50 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B92801E688C614FD2722D2D1 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B9280250ED6A531E8AE7234F /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B92802539056A15A1F717818 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -64,9 +69,11 @@
 		B928082E2694C2422ACA3F9D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B9280933602425E59B195E32 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9280A2488116BFB1DBB9AA7 /* GarbageDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageDetails.swift; sourceTree = "<group>"; };
-		B9280B04F82E700A992C706B /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B9280A7146370E459B3FEB02 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../UserProfileFlow/ProfileView.swift; sourceTree = "<group>"; };
 		B9280C0A1ED174034AFDA662 /* PickUpCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpCompleteView.swift; sourceTree = "<group>"; };
+		B9280C16B8D8E56AEB31E06C /* ChartsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpGarbageView.swift; sourceTree = "<group>"; };
+		B9280EE8AF43D31AA6AF9925 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C938886D2B11EBC600297C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92DD0CA2B1283BF002C242B /* SwiftUICharts in Frameworks */,
 				C93888702B11EC0600297C7B /* GoogleSignIn in Frameworks */,
 				C93888722B11EC0600297C7B /* GoogleSignInSwift in Frameworks */,
 			);
@@ -112,6 +120,7 @@
 				B92802AAC2A2B6B63B3C09A2 /* MapTab */,
 				B92801B4862E893B6C4FCB05 /* CommonUI */,
 				B9280497FA255FC0F5CE99E5 /* PolutionCreationFlow */,
+				B9280ABBBBB5481C5789F58A /* UserProfileFlow */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -128,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				B92802C1DA3611136D2D5A6C /* HeaderView.swift */,
-				B9280B04F82E700A992C706B /* ProfileView.swift */,
 				B92802D1C43B531F4D993DE2 /* MapView.swift */,
 			);
 			path = MapTab;
@@ -203,6 +211,15 @@
 			path = CleanUpFlow;
 			sourceTree = "<group>";
 		};
+		B9280ABBBBB5481C5789F58A /* UserProfileFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B9280C16B8D8E56AEB31E06C /* ChartsView.swift */,
+				B9280A7146370E459B3FEB02 /* ProfileView.swift */,
+			);
+			path = UserProfileFlow;
+			sourceTree = "<group>";
+		};
 		B9280BA1FB7B1519F8B7F4BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +227,8 @@
 				B9280933602425E59B195E32 /* AppState.swift */,
 				B92807FEC341D34AF57C69AA /* OnboardingData.swift */,
 				B447F8B92B12805300B62010 /* LocationService.swift */,
+				B9280EE8AF43D31AA6AF9925 /* Colors.swift */,
+				B92801D2765D2ADADC09AB50 /* Fonts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 			packageProductDependencies = (
 				C938886F2B11EC0600297C7B /* GoogleSignIn */,
 				C93888712B11EC0600297C7B /* GoogleSignInSwift */,
+				C92DD0C92B1283BF002C242B /* SwiftUICharts */,
 			);
 			productName = clientApp;
 			productReference = B928006F3840A08F16E994EC /* clientApp.app */;
@@ -256,6 +276,7 @@
 			mainGroup = B9280978122487EA6E56E2C8;
 			packageReferences = (
 				C938886E2B11EC0600297C7B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C92DD0C82B1283BF002C242B /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = B92800737F0E276FCE6AA193 /* Products */;
 			projectDirPath = "";
@@ -302,12 +323,15 @@
 				B9280B7BFD639999DDFA4E32 /* TabBarView.swift in Sources */,
 				B9280DB2E4F595E5D5286095 /* MainView.swift in Sources */,
 				B92802DDFB27742A2DBD1124 /* HeaderView.swift in Sources */,
-				B9280C6930C98DA28C01EC58 /* ProfileView.swift in Sources */,
 				B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */,
 				B92806C0BA507BEC87094404 /* ImagePickingView.swift in Sources */,
 				B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */,
 				B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */,
 				B9280CC5BD04F2D043F7EC23 /* UserDefaults.swift in Sources */,
+				B9280D755092347F8E00E991 /* ChartsView.swift in Sources */,
+				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
+				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,
+				B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +543,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C92DD0C82B1283BF002C242B /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
 		C938886E2B11EC0600297C7B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
@@ -530,6 +562,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C92DD0C92B1283BF002C242B /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C92DD0C82B1283BF002C242B /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		C938886F2B11EC0600297C7B /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C938886E2B11EC0600297C7B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;

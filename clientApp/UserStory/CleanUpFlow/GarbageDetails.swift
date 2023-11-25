@@ -40,7 +40,7 @@ struct GarbageDetails: View {
           Text("Go there")
             .bold()
             .padding()
-            .background(Color.green)
+            .background(Color(uiColor: .olive))
             .foregroundColor(.white)
             .cornerRadius(10)
         }
@@ -64,19 +64,19 @@ struct GarbageDetails: View {
               .cancel()
             ])
           }
-          .foregroundColor(Color.green)
+          .foregroundColor(Color(uiColor: .olive))
         
         NavigationLink(destination: PickUpGarbageView()) {
           Text("Pick up")
             .bold()
             .padding()
-            .background(Color.green)
+            .background(Color(uiColor: .olive))
             .foregroundColor(.white)
             .cornerRadius(10)
         }
       }
     }
       .padding()
-      .background(Color.green.opacity(0.4))
+      .background(Color(uiColor: .olive).opacity(0.4))
   }
 }
