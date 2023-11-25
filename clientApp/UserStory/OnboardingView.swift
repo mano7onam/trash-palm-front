@@ -40,21 +40,27 @@ struct OnboardingPageView: View {
       Image(systemName: data.imageName)
               .resizable()
               .aspectRatio(contentMode: .fit)
-              .padding()
+              .padding(30)
+      Spacer().frame(height: 20)
       Text(data.title)
               .font(.title)
+      Spacer().frame(height: 20)
       Text(data.description)
               .font(.subheadline)
+              .foregroundColor(.gray)
               .multilineTextAlignment(.center)
               .padding()
+      Spacer()
       Button(action: action) {
         Text(isLastPage ? "Finish" : "Next")
                 .bold()
                 .padding()
-                .background(Color.blue)
+                .background(Color.green)
                 .foregroundColor(.white)
                 .cornerRadius(10)
+        
       }
+      Spacer()
     }
   }
 }

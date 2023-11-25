@@ -14,7 +14,8 @@ struct OnboardingData {
 }
 
 let onboardingData = [
-  OnboardingData(imageName: "1.circle", title: "Title 1", description: "Description 1"),
+  OnboardingData(imageName: "1.circle", title: "Hello!", description: "Description 1"),
   OnboardingData(imageName: "2.circle", title: "Title 2", description: "Description 2"),
-  OnboardingData(imageName: "3.circle", title: "Title 3", description: "Description 3")
+  OnboardingData(imageName: "3.circle", title: "Title 3", description: "Description 3"),
+  OnboardingData(imageName: "4.circle", title: "Title 4", description: "Description 4")
 ]
