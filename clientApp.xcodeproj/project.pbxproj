@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B928002D6C1116337815165F /* clientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */; };
 		B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */; };
 		B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B928006F3840A08F16E994EC /* clientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92800B54CE0A13B12E3F3F6 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B92800CE2887044763913A0A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				B92800CE2887044763913A0A /* Place.swift */,
 				B9280933602425E59B195E32 /* AppState.swift */,
 				B92807FEC341D34AF57C69AA /* OnboardingData.swift */,
+				B447F8B92B12805300B62010 /* LocationService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
 				B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */,
 				B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */,
+				B447F8BA2B12805300B62010 /* LocationService.swift in Sources */,
 				B9280E318837F2729CA791B4 /* GarbageDetails.swift in Sources */,
 				B9280EF949DFC42D6C940BF6 /* OnboardingView.swift in Sources */,
 				B9280F524033A56CDA4E5294 /* LoginView.swift in Sources */,

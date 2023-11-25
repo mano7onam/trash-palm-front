@@ -8,14 +8,23 @@
 import Foundation
 import MapKit
 
-struct Place: Identifiable {
-  let id = UUID()
-  let name: String
-  let coordinate: CLLocationCoordinate2D
+struct Place: Identifiable, Hashable {
+	let id = UUID()
+	let name: String
+	let coordinate: CLLocationCoordinate2D
+	
+	static func == (lhs: Self, rhs: Self) -> Bool {
+		lhs.id == rhs.id
+	}
 }
 
-extension CLLocationCoordinate2D: Identifiable {
-  public var id: String {
-    "\(latitude)-\(longitude)"
-  }
+extension CLLocationCoordinate2D: Hashable {
+	public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+		lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+	}
+	
+	public func hash(into hasher: inout Hasher) {
+		hasher.combine(longitude)
+		hasher.combine(latitude)
+	}
 }

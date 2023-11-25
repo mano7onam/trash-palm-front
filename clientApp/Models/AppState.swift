@@ -11,6 +11,7 @@ class AppState: ObservableObject {
 	// Services
 	
 	lazy var authService = AuthService(state: self)
+	let locationService = LocationService()
 	
 	// UserAuth
 	@Published var givenName: String = ""
@@ -26,3 +27,4 @@ class AppState: ObservableObject {
 		authService.check()
 	}
 }
+

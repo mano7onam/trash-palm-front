@@ -10,11 +10,12 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-	enum ActiveSheet: String, Identifiable {
-		case details
-		case creation
-		var id: String {
-			rawValue
+	enum ActiveSheet: Identifiable, Hashable {
+		case details(Place)
+		case creation(Place)
+		
+		var id: Int {
+			hashValue
 		}
 	}
     struct MapSelection: Identifiable {
@@ -25,6 +26,8 @@ struct MapView: View {
         }
 	}
 	let places: [Place]
+
+	@State private var activeSheet: ActiveSheet?
 	
 	@State private var selection: MapSelection?
 	
@@ -37,11 +40,12 @@ struct MapView: View {
 				.frame(width: 20, height: 20)
 				.highPriorityGesture(
 					TapGesture().onEnded {
-						selection = .init(selectedPlace: place, activeSheet: .details)
+						activeSheet = .details(place)
 					}
 				)
 		}
 	}
+	
 	
 	var body: some View {
 		ZStack{
@@ -54,19 +58,18 @@ struct MapView: View {
 				.onTapGesture { location in
                     guard selection == nil else { return }
 					guard let pinLocation = reader.convert(location, from: .local) else { return }
-					let place = Place(name: "", coordinate: pinLocation)
-					selection = .init(selectedPlace: place, activeSheet: .creation)
+					activeSheet = .creation(Place(name: "", coordinate: pinLocation))
 				}
-				.sheet(item: $selection) { selectedPlace in
-					switch selectedPlace.activeSheet {
-					case .creation:
-						NavigationView {
-							CreateGarbageTagView()
-						}
-					case .details:
-						NavigationView {
-							GarbageDetails(place: selectedPlace.selectedPlace)
-						}
+				.sheet(item: $activeSheet) { sheet in
+					switch sheet {
+						case .creation:
+							NavigationView {
+								CreateGarbageTagView()
+							}
+						case let .details(place):
+							NavigationView {
+								GarbageDetails(place: place)
+							}
 					}
 				}
 			}
