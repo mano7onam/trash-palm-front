@@ -26,9 +26,7 @@ struct PickUpGarbageView: View {
       TextField("Enter your comment", text: $comment)
         .textFieldStyle(RoundedBorderTextFieldStyle())
       
-      Button(action: {
-        print("submit result")
-      }) {
+      NavigationLink(destination: PickUpCompleteView()) {
         Text("Submit")
           .bold()
           .padding()
