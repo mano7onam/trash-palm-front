@@ -18,19 +18,11 @@ struct MapView: View {
 			hashValue
 		}
 	}
-    struct MapSelection: Identifiable {
-		var selectedPlace: Place
-		var activeSheet: ActiveSheet
-        var id: String {
-            activeSheet.rawValue
-        }
-	}
+
 	let places: [Place]
 
 	@State private var activeSheet: ActiveSheet?
-	
-	@State private var selection: MapSelection?
-	
+		
 	@State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
 	
 	private func makeAnnotation(place: Place) -> Annotation<some View, some View>  {
@@ -56,7 +48,6 @@ struct MapView: View {
 					}
 				}
 				.onTapGesture { location in
-                    guard selection == nil else { return }
 					guard let pinLocation = reader.convert(location, from: .local) else { return }
 					activeSheet = .creation(Place(name: "", coordinate: pinLocation))
 				}
