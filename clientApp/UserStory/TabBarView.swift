@@ -13,7 +13,7 @@ struct TabBarView: View {
   var body: some View {
     NavigationView {
       TabView {
-        Text("Tab 1")
+        MapView(places: mockAnnotations)
                 .tabItem {
                   Image(systemName: "1.circle")
                   Text("Tab 1")
