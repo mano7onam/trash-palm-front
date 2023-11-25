@@ -10,7 +10,7 @@ import SwiftUI
 
 @main
 struct clientAppApp: App {
-    @StateObject var userAuth: UserAuthModel =  UserAuthModel()
+    @StateObject var userAuth: AppState =  AppState()
     
     var body: some Scene {
         WindowGroup {

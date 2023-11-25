@@ -6,18 +6,14 @@
 //
 
 import Foundation
-import SwiftUI
 import GoogleSignIn
 
-class UserAuthModel: ObservableObject {
+final class AuthService {
   
-  @Published var givenName: String = ""
-  @Published var profilePicUrl: String = ""
-  @Published var isLoggedIn: Bool = false
-  @Published var errorMessage: String = ""
+  private weak var appState: AppState?
   
-  init(){
-    check()
+  init(state: AppState) {
+    self.appState = state
   }
   
   func checkStatus(){
@@ -26,20 +22,21 @@ class UserAuthModel: ObservableObject {
       guard let user = user else { return }
       let givenName = user.profile?.givenName
       let profilePicUrl = user.profile!.imageURL(withDimension: 100)!.absoluteString
-      self.givenName = givenName ?? ""
-      self.profilePicUrl = profilePicUrl
-      self.isLoggedIn = true
+      self.appState?.givenName = givenName ?? ""
+      self.appState?.login = user.profile?.email ?? ""
+      self.appState?.profilePicUrl = profilePicUrl
+      self.appState?.isLoggedIn = true
     } else {
-      self.isLoggedIn = false
-      self.givenName = "Not Logged In"
-      self.profilePicUrl =  ""
+      self.appState?.isLoggedIn = false
+      self.appState?.givenName = "Not Logged In"
+      self.appState?.profilePicUrl =  ""
     }
   }
   
   func check(){
     GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
       if let error = error {
-        self.errorMessage = "error: \(error.localizedDescription)"
+        self.appState?.errorMessage = "error: \(error.localizedDescription)"
       }
       
       self.checkStatus()
@@ -55,7 +52,7 @@ class UserAuthModel: ObservableObject {
     GIDSignIn.sharedInstance.signIn(
       withPresenting: presentingViewController) { user, error in
       if let error = error {
-        self.errorMessage = "error: \(error.localizedDescription)"
+        self.appState?.errorMessage = "error: \(error.localizedDescription)"
       }
       self.checkStatus()
     }

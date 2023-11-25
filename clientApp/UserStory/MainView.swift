@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MainView: View {
-  @EnvironmentObject var vm: UserAuthModel
+  @EnvironmentObject var vm: AppState
   
   var body: some View {
       ZStack {

@@ -10,13 +10,13 @@ import SwiftUI
 import GoogleSignIn
 
 struct LoginView: View {
-  @EnvironmentObject var vm: UserAuthModel
+  @EnvironmentObject var vm: AppState
   var body: some View {
     VStack {
       Text(vm.givenName)
       AsyncImage(url: URL(string: vm.profilePicUrl)).frame(width: 100, height: 100)
       Button(action: {
-        vm.signIn()
+        vm.authService.signIn()
       }) {
         Text("Sign In")
       }
