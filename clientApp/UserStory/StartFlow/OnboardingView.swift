@@ -55,7 +55,7 @@ struct OnboardingPageView: View {
 				Text(isLastPage ? "Finish" : "Next")
 					.bold()
 					.padding()
-					.background(Color(uiColor: .olive))
+					.background(Color.olive)
 					.foregroundColor(.white)
 					.cornerRadius(10)
 				

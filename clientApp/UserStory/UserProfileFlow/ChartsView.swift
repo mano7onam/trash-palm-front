@@ -57,7 +57,7 @@ struct ChartsView: View {
                 }) {
                     Text("TOKENS")
                         .frame(width: 80, height: 150)
-                        .background(Color(uiColor: .olive))
+                        .background(Color.olive)
                         .clipShape(RoundedCorners(tl: 15, tr: 30, bl: 15, br: 15))
                         .foregroundColor(.white)
                 }
@@ -67,7 +67,7 @@ struct ChartsView: View {
                 }) {
                     Text("NFT")
                         .frame(width: 80, height: 150)
-                        .background(Color(uiColor: .olive))
+                        .background(Color.olive)
                         .clipShape(RoundedCorners(tl: 10, tr: 30, bl: 10, br: 10))
                         .foregroundColor(.white)
                 }

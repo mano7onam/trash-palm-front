@@ -24,7 +24,7 @@ struct CreateGarbageTagView: View {
 				AsyncImage(url: URL(string: appState.profilePicUrl)) { phase in
 					switch phase {
 						case .empty, .failure: 
-							Image("AccountPlaceholder")
+							Image(.accountPlaceholder)
 						case let .success(image):
 							image
 								.resizable()
@@ -32,7 +32,7 @@ struct CreateGarbageTagView: View {
 								.frame(width: 40)
 								.clipShape(Circle())
 						@unknown default:
-							Image("AccountPlaceholder")
+							Image(.accountPlaceholder)
 					}
 				}
 				.padding(.trailing)
@@ -46,13 +46,18 @@ struct CreateGarbageTagView: View {
 			RoundedRectangle(cornerRadius: 20, style: .continuous)
 				.fill(Color(hue: 0.283, saturation: 0.04, brightness: 1))
 				.overlay(alignment: .bottom) {
-					Text("Add Photo")
-						.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
-						.font(.custom("Khula", fixedSize: 16))
-						.padding(.bottom, 24)
+					Button {
+						print("open action sheet")
+					} label: {
+						Text("Add Photo")
+							.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
+							.font(.custom("Khula", fixedSize: 16))
+							.padding(.bottom, 24)
+					}
+					.buttonStyle(.plain)
 				}
 				.overlay {
-					Image("Camera")
+					Image(.camera)
 						.resizable()
 						.scaledToFit()
 						.padding(EdgeInsets(top: 28, leading: 29, bottom: 66, trailing: 48))
@@ -84,7 +89,7 @@ struct CreateGarbageTagView: View {
 			}
 			.frame(height: 124)
 			.padding(.horizontal, 23)
-			.padding(.bottom, 14)
+			.padding(.bottom, 29)
 			
 			Text("Donate")
 				.font(.custom("Alata", fixedSize: 18))

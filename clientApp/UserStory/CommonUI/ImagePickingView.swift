@@ -39,7 +39,7 @@ struct ImagePickingView: View {
 						.clipShape(Rectangle())
 				}
 				.frame(width: 230, height: 400)
-				.background(Color(uiColor: .olive))
+				.background(Color.olive)
 				.clipShape(RoundedRectangle(cornerRadius: 20))
 				
 				ForEach(images.indices, id: \.self) { index in

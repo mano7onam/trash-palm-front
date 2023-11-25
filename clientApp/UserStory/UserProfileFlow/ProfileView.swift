@@ -51,7 +51,7 @@ struct ProfileView: View {
 					.foregroundColor(Color.black)
 					.overlay(
 						RoundedRectangle(cornerRadius: 100, style: .circular)
-							.stroke(Color(uiColor: .olive), lineWidth: 1)
+							.stroke(Color.olive, lineWidth: 1)
 					)
 			}
 			Button(action: {
@@ -64,7 +64,7 @@ struct ProfileView: View {
 					.foregroundColor(Color.black)
 					.overlay(
 						RoundedRectangle(cornerRadius: 100, style: .circular)
-							.stroke(Color(uiColor: .olive), lineWidth: 1)
+							.stroke(Color.olive, lineWidth: 1)
 					)
 			}
 			Button(action: {
@@ -77,7 +77,7 @@ struct ProfileView: View {
 					.foregroundColor(Color.black)
 					.overlay(
 						RoundedRectangle(cornerRadius: 100, style: .circular)
-							.stroke(Color(uiColor: .olive), lineWidth: 1)
+							.stroke(Color.olive, lineWidth: 1)
 					)
 			}
 			Spacer()

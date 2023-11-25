@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 extension Font {
-	static let palmTitle: Font = .custom("Alata-Regular", fixedSize: 24)
-	static let palmTitle30: Font = .custom("Alata-Regular", fixedSize: 30)
-	static let palmRegular: Font = .custom("Khula-Regular", fixedSize: 16)
+	static let palmTitle: Font = .custom("Alata", fixedSize: 24)
+	static let palmTitle30: Font = .custom("Alata", fixedSize: 30)
+	static let palmRegular: Font = .custom("Khula", fixedSize: 16)
 }

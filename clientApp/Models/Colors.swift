@@ -5,11 +5,16 @@
 // Created by Stanislav Zelikson on 25/11/2023.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
-extension UIColor {
-	static let olive = UIColor(hex: "81A33F")
+extension Color {
+	static let olive = Color(hex: "81A33F")
+}
+
+extension Color {
+	init(hex: String) {
+		self.init(UIColor(hex: hex))
+	}
 }
 
 extension UIColor {
