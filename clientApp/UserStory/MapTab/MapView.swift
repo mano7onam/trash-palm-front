@@ -48,19 +48,17 @@ struct MapView: View {
 					}
 				}
 				.onTapGesture { location in
-					guard let pinLocation = reader.convert(location, from: .local) else { return }
+					guard activeSheet == nil,
+						let pinLocation = reader.convert(location, from: .local)
+					else { return }
 					activeSheet = .creation(Place(name: "", coordinate: pinLocation))
 				}
 				.sheet(item: $activeSheet) { sheet in
 					switch sheet {
-						case .creation:
-							NavigationView {
-								CreateGarbageTagView()
-							}
+						case let .creation(place):
+								CreateGarbageTagView(place: place)
 						case let .details(place):
-							NavigationView {
 								GarbageDetails(place: place)
-							}
 					}
 				}
 			}

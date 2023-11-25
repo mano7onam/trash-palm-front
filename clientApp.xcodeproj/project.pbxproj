@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
+		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
+		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
+		B447F8C52B12968100B62010 /* Khula-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C02B12968100B62010 /* Khula-Regular.ttf */; };
+		B447F8C62B12968100B62010 /* Khula-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C12B12968100B62010 /* Khula-SemiBold.ttf */; };
+		B447F8C72B12968100B62010 /* Khula-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C22B12968100B62010 /* Khula-ExtraBold.ttf */; };
+		B447F8C82B12968100B62010 /* Khula-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C32B12968100B62010 /* Khula-Bold.ttf */; };
 		B928002D6C1116337815165F /* clientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */; };
 		B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */; };
 		B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */; };
@@ -34,6 +40,12 @@
 
 /* Begin PBXFileReference section */
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
+		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
+		B447F8C02B12968100B62010 /* Khula-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Regular.ttf"; sourceTree = "<group>"; };
+		B447F8C12B12968100B62010 /* Khula-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-SemiBold.ttf"; sourceTree = "<group>"; };
+		B447F8C22B12968100B62010 /* Khula-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B447F8C32B12968100B62010 /* Khula-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Bold.ttf"; sourceTree = "<group>"; };
 		B928006F3840A08F16E994EC /* clientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92800B54CE0A13B12E3F3F6 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B92800CE2887044763913A0A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -71,6 +83,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B447F8BC2B128D0000B62010 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B447F8C32B12968100B62010 /* Khula-Bold.ttf */,
+				B447F8C22B12968100B62010 /* Khula-ExtraBold.ttf */,
+				B447F8BF2B12968100B62010 /* Khula-Light.ttf */,
+				B447F8C02B12968100B62010 /* Khula-Regular.ttf */,
+				B447F8C12B12968100B62010 /* Khula-SemiBold.ttf */,
+				B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B92800737F0E276FCE6AA193 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +137,7 @@
 		B9280351845FBE6166A4A5BA /* clientApp */ = {
 			isa = PBXGroup;
 			children = (
+				B447F8BC2B128D0000B62010 /* Resources */,
 				C938886D2B11EBC600297C7B /* Info.plist */,
 				B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */,
 				B9280A594BFB797528A054FB /* Preview Content */,
@@ -245,6 +271,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */,
+				B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */,
+				B447F8C72B12968100B62010 /* Khula-ExtraBold.ttf in Resources */,
+				B447F8C52B12968100B62010 /* Khula-Regular.ttf in Resources */,
+				B447F8C62B12968100B62010 /* Khula-SemiBold.ttf in Resources */,
+				B447F8C82B12968100B62010 /* Khula-Bold.ttf in Resources */,
 				B928091906FE8819DE3A9DEB /* Assets.xcassets in Resources */,
 				B9280245EF53C17A8BE2B69B /* Preview Assets.xcassets in Resources */,
 			);

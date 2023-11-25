@@ -15,5 +15,14 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Alata-Regular.ttf</string>
+		<string>Khula-Bold.ttf</string>
+		<string>Khula-ExtraBold.ttf</string>
+		<string>Khula-Light.ttf</string>
+		<string>Khula-Regular.ttf</string>
+		<string>Khula-SemiBold.ttf</string>
+	</array>
 </dict>
 </plist>
