@@ -60,12 +60,14 @@ struct MapView: View {
         }
         .sheet(isPresented: $showingDetails) {
           if let selectedPlace = selectedPlace {
-            PlaceDetailsView(place: selectedPlace)
+            NavigationView {
+              GarbageDetails(place: selectedPlace)
+            }
           }
         }
         .sheet(isPresented: $showingCreation) {
           if let creationPlace = creationPlace {
-            PlaceDetailsView(place: creationPlace)
+            GarbageDetails(place: creationPlace)
           }
         }
       }
