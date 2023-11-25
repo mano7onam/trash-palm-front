@@ -44,29 +44,32 @@ struct MapView: View {
   }
   
   var body: some View {
-    MapReader { reader in
-      Map(position: $position) {
-        ForEach(places, id: \.id) { place in
-          makeAnnotation(place: place)
+    ZStack{
+      MapReader { reader in
+        Map(position: $position) {
+          ForEach(places, id: \.id) { place in
+            makeAnnotation(place: place)
+          }
+        }
+        .onTapGesture { location in
+          guard showingDetails == false else { return }
+          guard let pinLocation = reader.convert(location, from: .local) else { return }
+          creationPlace = Place(name: "", coordinate: pinLocation)
+          showingCreation = true
+          showingDetails = false
+        }
+        .sheet(isPresented: $showingDetails) {
+          if let selectedPlace = selectedPlace {
+            PlaceDetailsView(place: selectedPlace)
+          }
+        }
+        .sheet(isPresented: $showingCreation) {
+          if let creationPlace = creationPlace {
+            PlaceDetailsView(place: creationPlace)
+          }
         }
       }
-      .onTapGesture { location in
-        guard showingDetails == false else { return }
-        guard let pinLocation = reader.convert(location, from: .local) else { return }
-        creationPlace = Place(name: "", coordinate: pinLocation)
-        showingCreation = true
-        showingDetails = false
-      }
-      .sheet(isPresented: $showingDetails) {
-        if let selectedPlace = selectedPlace {
-          PlaceDetailsView(place: selectedPlace)
-        }
-      }
-      .sheet(isPresented: $showingCreation) {
-        if let creationPlace = creationPlace {
-          PlaceDetailsView(place: creationPlace)
-        }
-      }
+      HeaderView()
     }
   }
 }

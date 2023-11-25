@@ -41,7 +41,7 @@ struct TabBarView: View {
                   Image(systemName: "4.circle")
                   Text("Tab 4")
                 }
-      }.navigationTitle(Text("Title"))
+      }
     }
   }
 }
