@@ -18,6 +18,7 @@
 		B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807FEC341D34AF57C69AA /* OnboardingData.swift */; };
 		B9280702288E030A226F756F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807D041F4DB1B078ABF52 /* AuthService.swift */; };
 		B928091906FE8819DE3A9DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */; };
+		B9280A3EB5AA4009D134D846 /* ImagePickingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809970FE4A8B6218CB0BF /* ImagePickingView.swift */; };
 		B9280AAF81DE8751F39F69FF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280E5FCEC9EB09AC74FEC6 /* MainView.swift */; };
 		B9280CCE15D20FA7193096DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92808BDE6447CB8BA438914 /* LoginView.swift */; };
 		B9280D78704A3EA0BD3D8DF0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D6E77D05C5DD448C618 /* OnboardingView.swift */; };
@@ -39,6 +40,7 @@
 		B92807FEC341D34AF57C69AA /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		B92808BDE6447CB8BA438914 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B9280933602425E59B195E32 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B92809970FE4A8B6218CB0BF /* ImagePickingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickingView.swift; sourceTree = "<group>"; };
 		B9280B461FBABA70786228E9 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B9280B545C5C2D253CFA41DA /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B9280CDF77A368909916DCA1 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				B9280B461FBABA70786228E9 /* HeaderView.swift */,
 				B9280D07B7083A2359673F27 /* ProfileView.swift */,
 				B92803036DB00DAB86BC41B4 /* PickUpGarbageView.swift */,
+				B92809970FE4A8B6218CB0BF /* ImagePickingView.swift */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				B9280189F77FE4B776283F72 /* HeaderView.swift in Sources */,
 				B9280F2583D49F6213E226C6 /* ProfileView.swift in Sources */,
 				B928016687367AB738CCA8FB /* PickUpGarbageView.swift in Sources */,
+				B9280A3EB5AA4009D134D846 /* ImagePickingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
