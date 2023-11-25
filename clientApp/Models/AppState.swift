@@ -20,9 +20,11 @@ class AppState: ObservableObject {
   @Published var errorMessage: String = ""
   
   // Settings
-  @Published var onboardingPassed = false
+  @Published var onboardingPassed: Bool
   
   init() {
+    @UserDefault("onboardingPassed", defaultValue: false) var onboardingPassed: Bool
+    self.onboardingPassed = onboardingPassed
     authService.check()
   }
 }
