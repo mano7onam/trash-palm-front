@@ -55,8 +55,8 @@ struct MapView: View {
           guard showingDetails == false else { return }
           guard let pinLocation = reader.convert(location, from: .local) else { return }
           creationPlace = Place(name: "", coordinate: pinLocation)
-          showingCreation = true
           showingDetails = false
+          showingCreation = true
         }
         .sheet(isPresented: $showingDetails) {
           if let selectedPlace = selectedPlace {

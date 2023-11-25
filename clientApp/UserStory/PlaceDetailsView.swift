@@ -13,21 +13,50 @@ struct PlaceDetailsView: View {
   let place: Place
   
   var body: some View {
-    VStack {
-      Text(place.name)
-              .font(.title)
-              .padding()
+    VStack(spacing: 20) {
+      Text("Garbage details")
+        .font(.title)
+      TabView {
+        ForEach(0..<5) { index in
+          Image("image(index)")
+            .resizable()
+            .scaledToFill()
+            .background(Color.red)
+            .frame(width: 230, height: 230 * 16 / 9 )
+            .clipShape(RoundedRectangle(cornerRadius: 30))
+        }
+      }
+        .tabViewStyle(PageTabViewStyle())
       
-      Map(coordinateRegion: .constant(MKCoordinateRegion(
-        center: place.coordinate,
-        span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-      )))
-              .disabled(true)
-              .frame(height: 200)
-              .cornerRadius(10)
-              .padding()
-      
+      Text("Description")
       Spacer()
+      Spacer()
+      HStack {
+        Button(action: {
+          print("Button 1 tapped")
+        }) {
+          Text("Button 1")
+            .bold()
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+          .foregroundColor(Color.green)
+        
+        Button(action: {
+          print("Button 2 tapped")
+        }) {
+          Text("Button 2")
+            .bold()
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+      }
     }
+      .padding()
+      .background(Color.green.opacity(0.4))
   }
 }

@@ -15,9 +15,13 @@ struct HeaderView: View {
   var body: some View {
     VStack {
       ZStack {
-        Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(1), Color.white.opacity(0.9), Color.white.opacity(0.7), Color.white.opacity(0)]),
-                     startPoint: .top,
-                     endPoint: .bottom)).frame(height: 100)
+        Rectangle()
+          .fill(LinearGradient(
+            gradient: Gradient(colors: [Color.white.opacity(1), Color.white.opacity(0.9), Color.white.opacity(0.7), Color.white.opacity(0)]),
+            startPoint: .top,
+            endPoint: .bottom
+          ))
+          .frame(height: 100)
         HStack {
           Spacer()
           NavigationLink(destination: ProfileView()) {
@@ -30,7 +34,6 @@ struct HeaderView: View {
             }
             .padding(.top, 30)
           }
-          
         }
       }
       Spacer()
