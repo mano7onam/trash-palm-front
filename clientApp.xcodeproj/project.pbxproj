@@ -13,10 +13,12 @@
 		B928038FB4F983DF01EB59F1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280CDF77A368909916DCA1 /* TabBarView.swift */; };
 		B928045C9E340B4630E834D4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92800CE2887044763913A0A /* Place.swift */; };
 		B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280933602425E59B195E32 /* AppState.swift */; };
+		B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807FEC341D34AF57C69AA /* OnboardingData.swift */; };
 		B9280702288E030A226F756F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807D041F4DB1B078ABF52 /* AuthService.swift */; };
 		B928091906FE8819DE3A9DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */; };
 		B9280AAF81DE8751F39F69FF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280E5FCEC9EB09AC74FEC6 /* MainView.swift */; };
 		B9280CCE15D20FA7193096DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92808BDE6447CB8BA438914 /* LoginView.swift */; };
+		B9280D78704A3EA0BD3D8DF0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D6E77D05C5DD448C618 /* OnboardingView.swift */; };
 		B9280FDA6377DCB743B44A40 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280B545C5C2D253CFA41DA /* MapView.swift */; };
 		C93888702B11EC0600297C7B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C938886F2B11EC0600297C7B /* GoogleSignIn */; };
 		C93888722B11EC0600297C7B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C93888712B11EC0600297C7B /* GoogleSignInSwift */; };
@@ -30,10 +32,12 @@
 		B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B92807D041F4DB1B078ABF52 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B92807D9F1DFC91FC4107473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B92807FEC341D34AF57C69AA /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		B92808BDE6447CB8BA438914 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B9280933602425E59B195E32 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9280B545C5C2D253CFA41DA /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B9280CDF77A368909916DCA1 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B9280D6E77D05C5DD448C618 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B9280E5FCEC9EB09AC74FEC6 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C938886D2B11EBC600297C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,7 @@
 				B9280CDF77A368909916DCA1 /* TabBarView.swift */,
 				B9280B545C5C2D253CFA41DA /* MapView.swift */,
 				B92800595932DD4F0C869294 /* PlaceDetailsView.swift */,
+				B9280D6E77D05C5DD448C618 /* OnboardingView.swift */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				B92800CE2887044763913A0A /* Place.swift */,
 				B9280933602425E59B195E32 /* AppState.swift */,
+				B92807FEC341D34AF57C69AA /* OnboardingData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 				B928018911D75C0F4F21412C /* PlaceDetailsView.swift in Sources */,
 				B928045C9E340B4630E834D4 /* Place.swift in Sources */,
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
+				B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */,
+				B9280D78704A3EA0BD3D8DF0 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

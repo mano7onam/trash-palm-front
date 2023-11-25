@@ -14,7 +14,11 @@ struct MainView: View {
   var body: some View {
       ZStack {
         if vm.isLoggedIn {
-          TabBarView().transition(.opacity)
+          if vm.onboardingPassed {
+            TabBarView().transition(.opacity)
+          } else {
+            OnboardingView()
+          }
         } else {
           LoginView().padding()
         }
