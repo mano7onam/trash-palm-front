@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum ChallengeStatus: String {
+enum ChallengeStatus: String, Decodable {
     case active = "ACTIVE"
     case processing = "PROCESSING"
     case finished = "FINISHED"
 }
 
-struct Challenge: Transactionable {
+struct Challenge: Transactionable, Decodable {
     let id: String
     let title: String
     let description: String
