@@ -149,4 +149,16 @@ final class BackendService {
         let _ = try await postData(jsonData, to: url)
     }
     
+    func getAllChallenges() async throws -> [Challenge] {
+        let url = URL(string: backendUrl + "/challenges")! // Please replace with your actual endpoint
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue(self.email, forHTTPHeaderField: "email")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let data = try await fetchData(from: request)
+        let challenges = try JSONDecoder().decode([Challenge].self, from: data)
+        return challenges
+    }
+    
 }
