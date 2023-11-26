@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC398E5D2B131EFC00555BA2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E5C2B131EFC00555BA2 /* Account.swift */; };
+		AC398E5F2B13215000555BA2 /* Translactionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E5E2B13215000555BA2 /* Translactionable.swift */; };
+		AC398E612B13218000555BA2 /* Nft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E602B13218000555BA2 /* Nft.swift */; };
+		AC398E632B1321BF00555BA2 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E622B1321BF00555BA2 /* Tag.swift */; };
+		AC398E652B13224800555BA2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E642B13224800555BA2 /* Challenge.swift */; };
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
 		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
@@ -47,6 +52,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC398E5C2B131EFC00555BA2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AC398E5E2B13215000555BA2 /* Translactionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translactionable.swift; sourceTree = "<group>"; };
+		AC398E602B13218000555BA2 /* Nft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nft.swift; sourceTree = "<group>"; };
+		AC398E622B1321BF00555BA2 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		AC398E642B13224800555BA2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
 		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
@@ -267,6 +277,11 @@
 				B9280EE8AF43D31AA6AF9925 /* Colors.swift */,
 				B92801D2765D2ADADC09AB50 /* Fonts.swift */,
 				C9DE57F02B12B74200D17198 /* BalanceModel.swift */,
+				AC398E5C2B131EFC00555BA2 /* Account.swift */,
+				AC398E5E2B13215000555BA2 /* Translactionable.swift */,
+				AC398E602B13218000555BA2 /* Nft.swift */,
+				AC398E622B1321BF00555BA2 /* Tag.swift */,
+				AC398E642B13224800555BA2 /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,14 +365,18 @@
 			files = (
 				B928002D6C1116337815165F /* clientAppApp.swift in Sources */,
 				B9280702288E030A226F756F /* AuthService.swift in Sources */,
+				AC398E612B13218000555BA2 /* Nft.swift in Sources */,
 				B447F8D12B12C6E100B62010 /* Router.swift in Sources */,
 				B928045C9E340B4630E834D4 /* Place.swift in Sources */,
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
 				C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */,
 				B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */,
+				AC398E5F2B13215000555BA2 /* Translactionable.swift in Sources */,
 				B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */,
+				AC398E652B13224800555BA2 /* Challenge.swift in Sources */,
 				B447F8BA2B12805300B62010 /* LocationService.swift in Sources */,
 				B9280E318837F2729CA791B4 /* GarbageDetails.swift in Sources */,
+				AC398E632B1321BF00555BA2 /* Tag.swift in Sources */,
 				B9280EF949DFC42D6C940BF6 /* OnboardingView.swift in Sources */,
 				B9280F524033A56CDA4E5294 /* LoginView.swift in Sources */,
 				B9280DB2E4F595E5D5286095 /* MainView.swift in Sources */,
@@ -371,6 +390,7 @@
 				B9280D755092347F8E00E991 /* ChartsView.swift in Sources */,
 				B447F8CD2B12C63000B62010 /* TabBarView.swift in Sources */,
 				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
+				AC398E5D2B131EFC00555BA2 /* Account.swift in Sources */,
 				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,
 				C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */,
 				B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */,
