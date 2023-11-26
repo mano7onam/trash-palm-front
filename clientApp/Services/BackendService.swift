@@ -9,6 +9,7 @@ import Foundation
 
 final class BackendService {
     private var email: String = "some@gmail.com"
+    private var backendUrl = "http://172.60.8.14:8080"
     
     init(email: String) {
         self.email = email
@@ -33,7 +34,7 @@ final class BackendService {
 
     func createTag(lon: Double, lat: Double, title: String, description: String, owner: String, prize: Int) async throws {
         let id = UUID()
-        let url = URL(string: "http://172.60.8.14:8080/tags")!
+        let url = URL(string: backendUrl + "/tags")!
 
         let json: [String: Any] = [
             "id": id.uuidString,
@@ -58,10 +59,10 @@ final class BackendService {
     }
 
     func getTags() async throws -> [Tag] {
-        let url = URL(string: "http://172.60.8.14:8080/tags")!
+        let url = URL(string: backendUrl + "/tags")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("some@gmail.com", forHTTPHeaderField: "email")
+        request.addValue(self.email, forHTTPHeaderField: "email")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let data = try await fetchData(from: request)
@@ -70,10 +71,10 @@ final class BackendService {
     }
     
     func getAccount() async throws -> Account {
-        let url = URL(string: "http://172.60.8.14:8080/accounts")!
+        let url = URL(string: backendUrl + "/accounts")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("some@gmail.com", forHTTPHeaderField: "email")
+        request.addValue(self.email, forHTTPHeaderField: "email")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let data = try await fetchData(from: request)
@@ -86,6 +87,66 @@ final class BackendService {
         return account.nfts.map { nft in
             NftAsset(imageName: nft.id, text: String(nft.value))
         }
+    }
+    
+    func addPhotoToTag(id: String, photoData: String) async throws {
+        let url = URL(string: backendUrl + "/\(id)/photos")!
+
+        let json: [String: Any] = [
+            "data": photoData
+        ]
+
+        let jsonData = try JSONSerialization.data(withJSONObject: json)
+        let _ = try await postData(jsonData, to: url)
+    }
+    
+    func addCommentToTag(id: String, commentData: String) async throws {
+        let url = URL(string: backendUrl + "/\(id)/comments")!
+
+        let json: [String: Any] = [
+            "data": commentData
+        ]
+
+        let jsonData = try JSONSerialization.data(withJSONObject: json)
+        let _ = try await postData(jsonData, to: url)
+    }
+    
+    func voteForTag(id: String, amount: Int) async throws {
+        let url = URL(string: backendUrl + "/\(id)/vote")!
+        
+        struct TagVoteRequest: Encodable {
+            let amount: Int
+        }
+
+        let voteRequest = TagVoteRequest(amount: amount)
+        let jsonData = try JSONEncoder().encode(voteRequest)
+
+        let _ = try await postData(jsonData, to: url)
+    }
+    
+    func makeDecisionForTag(id: String, decision: Bool) async throws {
+        let url = URL(string: backendUrl + "/\(id)/decision")!
+        
+        struct TagDecisionRequest: Encodable {
+            let decision: Bool
+        }
+
+        let decisionRequest = TagDecisionRequest(decision: decision)
+        let jsonData = try JSONEncoder().encode(decisionRequest)
+        let _ = try await postData(jsonData, to: url)
+    }
+
+    func claimTag(id: String, photoUrls: [String]) async throws {
+        let url = URL(string: backendUrl + "/\(id)/claim")!
+        
+        struct ClaimTagBodyRequest: Encodable {
+            let photoUrls: [String]
+        }
+
+        let claimRequest = ClaimTagBodyRequest(photoUrls: photoUrls)
+        let jsonData = try JSONEncoder().encode(claimRequest)
+
+        let _ = try await postData(jsonData, to: url)
     }
     
 }
