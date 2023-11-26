@@ -81,9 +81,9 @@ struct ProfileView: View {
 					)
 			}
 			Button(action: {
-				print("list of trash")
+				router.moveTo(.checkCleaning)
 			}) {
-				Text("List of trash")
+				Text("My orders")
 					.padding()
 					.font(.palmRegular)
 					.frame(minWidth: 300)
