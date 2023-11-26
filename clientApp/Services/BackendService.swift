@@ -49,8 +49,8 @@ final class BackendService {
         let _ = try await postData(jsonData, to: url)
     }
     
-    func fetchData(from url: URL) async throws -> Data {
-        let (data, response) = try await URLSession.shared.data(from: url)
+    func fetchData(from request: URLRequest) async throws -> Data {
+        let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw NSError()
         }
@@ -64,19 +64,19 @@ final class BackendService {
         request.addValue("some@gmail.com", forHTTPHeaderField: "email")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let data = try await fetchData(from: url)
+        let data = try await fetchData(from: request)
         let tags = try JSONDecoder().decode([Tag].self, from: data)
         return tags
     }
     
     func getAccount() async throws -> Account {
-        let url = URL(string: "http://172.60.8.14:8080/account")!
+        let url = URL(string: "http://172.60.8.14:8080/accounts")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("some@gmail.com", forHTTPHeaderField: "email")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let data = try await fetchData(from: url)
+        let data = try await fetchData(from: request)
         let account = try JSONDecoder().decode(Account.self, from: data)
         return account
     }

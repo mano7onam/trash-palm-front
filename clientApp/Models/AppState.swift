@@ -41,7 +41,7 @@ class AppState: ObservableObject {
 		allTrashLists = mockTrashList
         backendService.setEmail(email: self.login)
         
-        Task {
+        Task { @MainActor in
             do {
                 let tags = try await backendService.getTags()
                 self.allMarkers = getPlacesFromTags(tags: tags)
@@ -49,7 +49,7 @@ class AppState: ObservableObject {
                 self.allNftAssets = try await backendService.getNfts()
             }
             catch {
-                print(error.localizedDescription.debugDescription)
+                print(error)
             }
         }
         
