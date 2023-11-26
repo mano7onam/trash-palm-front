@@ -20,7 +20,7 @@ struct GarbageDetails: View {
 				.font(.title)
 			TabView {
                 ForEach(appState.selectedPlace?.tag.photoUrls ?? [], id: \.self) { photoUrl in
-                    AsyncImage(url: photoUrl)
+                    AsyncImage(url: URL(string: photoUrl))
                         .frame(width: 230, height: 230 * 16 / 9)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                 }

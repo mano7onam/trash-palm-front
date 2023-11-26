@@ -16,7 +16,7 @@ struct ProfileView: View {
 	
 	var body: some View {
 		VStack {
-			AsyncImage(url: URL(string: vm.profilePicUrl)) { phase in
+			AsyncImage(url: URL(string: vm.profilePicUrl)!) { phase in
 				if let image = phase.image {
 					image
 						.resizable()
