@@ -35,11 +35,15 @@ class AppState: ObservableObject {
 	// TrashList
 	@Published private(set) var allTrashLists: [TrashListItem] = []
 	
+	// My orders
+	@Published private(set) var myOrders = [MyOrder]()
+	
 	init() {
 		authService.check()
 		allNftAssets = mockNftAssets
 		allTrashLists = mockTrashList
         backendService.setEmail(email: self.login)
+		myOrders = mockOrders
         
         Task { @MainActor in
             do {
@@ -94,4 +98,35 @@ private let mockTrashList = [
     ]),
     TrashListItem(imageName: "bin", detailsImageName: "binboy", text: "Cleaned by you", list: items.suffix(2)),
     TrashListItem(imageName: "all_types", detailsImageName: "all_types", text: "All types", list: items),
+]
+
+private let mockOrders = [
+	MyOrder(
+		status: .created,
+		assigneeId: "User #2345",
+		place: Place(
+			name: "some place 1",
+			coordinate: CLLocationCoordinate2D(latitude: 57, longitude: 35),
+			tag: .mock()
+		)
+	),
+	MyOrder(
+		status: .reviewRequested,
+		assigneeId: "User #3456",
+		place: Place(
+			name: "some place 1",
+			coordinate: CLLocationCoordinate2D(latitude: 57.1, longitude: 35.1),
+			tag: .mock()
+		)
+	),
+	MyOrder(
+		status: .done,
+		assigneeId: "User #4567",
+		place: Place(
+			name: "some place 3",
+			coordinate: CLLocationCoordinate2D(latitude: 57.11, longitude: 35.11),
+			tag: .mock()
+		)
+	),
+	
 ]

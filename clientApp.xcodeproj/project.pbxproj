@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AC398E632B1321BF00555BA2 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E622B1321BF00555BA2 /* Tag.swift */; };
 		AC398E652B13224800555BA2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E642B13224800555BA2 /* Challenge.swift */; };
 		AC5CBAC92B1338BA008CF7B0 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */; };
+		B4076FEF2B135A3B00252D07 /* MyOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4076FEE2B135A3B00252D07 /* MyOrder.swift */; };
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
 		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
@@ -65,6 +66,7 @@
 		AC398E622B1321BF00555BA2 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		AC398E642B13224800555BA2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		B4076FEE2B135A3B00252D07 /* MyOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrder.swift; sourceTree = "<group>"; };
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
 		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				AC398E642B13224800555BA2 /* Challenge.swift */,
 				B9280D1D1916ADC5BAEDEFF3 /* NftAsset.swift */,
 				B928054288436FF0CF625D4E /* TrashListItem.swift */,
+				B4076FEE2B135A3B00252D07 /* MyOrder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */,
 				B9280CC5BD04F2D043F7EC23 /* UserDefaults.swift in Sources */,
 				B9280D755092347F8E00E991 /* ChartsView.swift in Sources */,
+				B4076FEF2B135A3B00252D07 /* MyOrder.swift in Sources */,
 				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
 				AC398E5D2B131EFC00555BA2 /* Account.swift in Sources */,
 				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,

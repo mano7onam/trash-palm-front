@@ -47,6 +47,7 @@ struct TabBarView: View {
 				}
 			}
 		}
+		.ignoresSafeArea(.keyboard, edges: .bottom)
 		.frame(height: 75)
     }
 }
