@@ -14,6 +14,10 @@ final class BackendService {
         self.email = email
     }
     
+    func setEmail(email: String) {
+        self.email = email
+    }
+    
     enum NetworkingError: Error { case badResponse, badData, encodingError }
 
     func postData(_ data: Data, to url: URL) async throws -> Data {

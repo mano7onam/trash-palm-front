@@ -12,6 +12,7 @@ struct Place: Identifiable, Hashable {
 	let id = UUID()
 	let name: String
 	let coordinate: CLLocationCoordinate2D
+    let tag: Tag
 	
 	static func == (lhs: Self, rhs: Self) -> Bool {
 		lhs.id == rhs.id

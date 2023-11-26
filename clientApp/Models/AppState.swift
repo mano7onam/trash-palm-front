@@ -12,6 +12,7 @@ class AppState: ObservableObject {
 	// Services
 	
 	lazy var authService = AuthService(state: self)
+    lazy var backendService = BackendService(email: "some@gmail.com")
 	let locationService = LocationService()
 	
 	// UserAuth
@@ -30,13 +31,31 @@ class AppState: ObservableObject {
 	
 	init() {
 		authService.check()
-		allMarkers = mockAnnotations
+        backendService.setEmail(email: self.login)
+        
+        Task {
+            do {
+                let tags = try await backendService.getTags()
+                self.allMarkers = getPlacesFromTags(tags: tags)
+            }
+            catch {
+                print(error.localizedDescription.debugDescription)
+            }
+        }
+        
 	}
+    
+    func getPlacesFromTags(tags: [Tag]) -> [Place] {
+        return tags.map { tag in
+            let coordinate = CLLocationCoordinate2D(latitude: tag.lat, longitude: tag.lon)
+            return Place(name: tag.title, coordinate: coordinate, tag: tag)
+        }
+    }
 }
 
-private let mockAnnotations = [
-	Place(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-	   Place(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-	   Place(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-	   Place(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-   ]
+//private let mockAnnotations = [
+//	Place(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
+//	   Place(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
+//	   Place(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
+//	   Place(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
+//   ]
