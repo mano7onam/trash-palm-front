@@ -40,6 +40,8 @@
 		C92DD0CA2B1283BF002C242B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = C92DD0C92B1283BF002C242B /* SwiftUICharts */; };
 		C93888702B11EC0600297C7B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C938886F2B11EC0600297C7B /* GoogleSignIn */; };
 		C93888722B11EC0600297C7B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C93888712B11EC0600297C7B /* GoogleSignInSwift */; };
+		C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */; };
+		C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE57F02B12B74200D17198 /* BalanceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpGarbageView.swift; sourceTree = "<group>"; };
 		B9280EE8AF43D31AA6AF9925 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C938886D2B11EBC600297C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceAmountView.swift; sourceTree = "<group>"; };
+		C9DE57F02B12B74200D17198 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,7 @@
 			children = (
 				B9280C16B8D8E56AEB31E06C /* ChartsView.swift */,
 				B9280A7146370E459B3FEB02 /* ProfileView.swift */,
+				C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */,
 			);
 			path = UserProfileFlow;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				B447F8B92B12805300B62010 /* LocationService.swift */,
 				B9280EE8AF43D31AA6AF9925 /* Colors.swift */,
 				B92801D2765D2ADADC09AB50 /* Fonts.swift */,
+				C9DE57F02B12B74200D17198 /* BalanceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				B9280702288E030A226F756F /* AuthService.swift in Sources */,
 				B928045C9E340B4630E834D4 /* Place.swift in Sources */,
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
+				C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */,
 				B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */,
 				B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */,
 				B447F8BA2B12805300B62010 /* LocationService.swift in Sources */,
@@ -331,6 +338,7 @@
 				B9280D755092347F8E00E991 /* ChartsView.swift in Sources */,
 				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
 				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,
+				C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */,
 				B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

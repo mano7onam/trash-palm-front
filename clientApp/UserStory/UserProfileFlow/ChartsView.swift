@@ -37,24 +37,25 @@ struct ChartsView: View {
                     Text($0.rawValue.capitalized)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
             
             Picker("Please choose a period", selection: $selectedPeriod) {
                 ForEach(ChartPeriod.allCases, id: \.self) {
                     Text($0.rawValue.capitalized)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
             
-            LineView(data: (selectedChartType == .invested ? investedData : earnedData).map{ CGFloat($0) }, title: "Token Price", legend: "Daily price")
+            LineView(data: (selectedChartType == .invested ? investedData : earnedData)
+                .map { CGFloat($0) }, title: "Tokens balance", legend: "description"
+            )
                 .padding()
             Text("Review caterories")
             HStack {
-                Button(action: {
-                    print("tokens")
-                }) {
+                
+                NavigationLink(destination: BalanceAmountView(balanceType: .tokens)) {
                     Text("TOKENS")
                         .frame(width: 80, height: 150)
                         .background(Color.olive)
@@ -62,9 +63,7 @@ struct ChartsView: View {
                         .foregroundColor(.white)
                 }
                 Spacer().frame(width: 32)
-                Button(action: {
-                    print("NFT")
-                }) {
+                NavigationLink(destination: BalanceAmountView(balanceType: .nft)) {
                     Text("NFT")
                         .frame(width: 80, height: 150)
                         .background(Color.olive)
@@ -74,6 +73,7 @@ struct ChartsView: View {
             }
             
         }
+            .padding(.top, -60)
             .onAppear() {
                 updateData()
             }

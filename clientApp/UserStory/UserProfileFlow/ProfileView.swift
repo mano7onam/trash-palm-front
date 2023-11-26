@@ -26,7 +26,7 @@ struct ProfileView: View {
 				}
 			}.padding(.top, -60)
 			ZStack {
-				Image("profile.cover")
+				Image("profile_cover")
 				VStack {
 					Spacer().frame(height: 30)
 					Text(vm.givenName)
@@ -34,18 +34,24 @@ struct ProfileView: View {
 						.padding(.top, -20)
 					Spacer().frame(height: 40)
 					HStack {
-						Image("token.icon")
+						Image("token")
+							.padding(.leading, -30)
 						Text("123 tokens")
-						Image("nft.icon")
+							.font(.palmRegular)
+							.padding(.leading, -8)
+						Spacer().frame(width: 8)
+						Image("NFT")
 						Text("5 NFT")
+							.font(.palmRegular)
 					}
 				}
-			}.padding(.top, -45)
-			Button(action: {
-				print("balance")
-			}) {
+			}
+				.padding(.top, -45)
+				.padding(.leading, 8)
+			NavigationLink(destination: ChartsView()) {
 				Text("Balance")
 					.padding()
+					.font(.palmRegular)
 					.frame(minWidth: 300)
 					.background(Color.white)
 					.foregroundColor(Color.black)
@@ -59,6 +65,7 @@ struct ProfileView: View {
 			}) {
 				Text("Challenges")
 					.padding()
+					.font(.palmRegular)
 					.frame(minWidth: 300)
 					.background(Color.white)
 					.foregroundColor(Color.black)
@@ -72,6 +79,7 @@ struct ProfileView: View {
 			}) {
 				Text("List of trash")
 					.padding()
+					.font(.palmRegular)
 					.frame(minWidth: 300)
 					.background(Color.white)
 					.foregroundColor(Color.black)
