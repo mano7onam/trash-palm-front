@@ -20,25 +20,29 @@
 		B447F8C62B12968100B62010 /* Khula-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C12B12968100B62010 /* Khula-SemiBold.ttf */; };
 		B447F8C72B12968100B62010 /* Khula-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C22B12968100B62010 /* Khula-ExtraBold.ttf */; };
 		B447F8C82B12968100B62010 /* Khula-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8C32B12968100B62010 /* Khula-Bold.ttf */; };
-		B447F8CD2B12C63000B62010 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8CC2B12C63000B62010 /* TabBarView.swift */; };
-		B447F8CF2B12C6D800B62010 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8CE2B12C6D800B62010 /* RouterView.swift */; };
-		B447F8D12B12C6E100B62010 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8D02B12C6E100B62010 /* Router.swift */; };
 		B928002D6C1116337815165F /* clientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */; };
-		B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */; };
 		B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */; };
+		B92801DCF7169EA3D681388C /* NftAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280D1D1916ADC5BAEDEFF3 /* NftAsset.swift */; };
 		B9280245EF53C17A8BE2B69B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92807D9F1DFC91FC4107473 /* Preview Assets.xcassets */; };
 		B92802DDFB27742A2DBD1124 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92802C1DA3611136D2D5A6C /* HeaderView.swift */; };
+		B92803F51272F83B70EDA8B9 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280A3367B2E62E8B7D6451 /* RouterView.swift */; };
+		B92803FFF3AD696D7783D3BF /* TrashListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928028038DB054A36234405 /* TrashListView.swift */; };
 		B928045C9E340B4630E834D4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92800CE2887044763913A0A /* Place.swift */; };
 		B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280933602425E59B195E32 /* AppState.swift */; };
+		B928060E5155EDF13D5F1962 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92808471353A0E40839971F /* TabBarView.swift */; };
 		B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807FEC341D34AF57C69AA /* OnboardingData.swift */; };
 		B92806C0BA507BEC87094404 /* ImagePickingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92804CF6E5B03DEBFF8BBF3 /* ImagePickingView.swift */; };
 		B9280702288E030A226F756F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92807D041F4DB1B078ABF52 /* AuthService.swift */; };
+		B92807FD2A5B5EFF3BA3E10F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280996E484DBB4A94F5AF4 /* Router.swift */; };
 		B928091906FE8819DE3A9DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */; };
+		B9280A7A680695B51AFC4527 /* NftCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92803493A48B451F9EC5729 /* NftCollectionView.swift */; };
 		B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280EE8AF43D31AA6AF9925 /* Colors.swift */; };
 		B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280C0A1ED174034AFDA662 /* PickUpCompleteView.swift */; };
+		B9280B30B8D2949BA11B4D47 /* TrashListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928054288436FF0CF625D4E /* TrashListItem.swift */; };
 		B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92802D1C43B531F4D993DE2 /* MapView.swift */; };
 		B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92801D2765D2ADADC09AB50 /* Fonts.swift */; };
 		B9280CC5BD04F2D043F7EC23 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280250ED6A531E8AE7234F /* UserDefaults.swift */; };
+		B9280D3CF23B0B537A96CF71 /* CreateGarbageTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280A6AE0669B825B36A3EF /* CreateGarbageTagView.swift */; };
 		B9280D755092347F8E00E991 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280C16B8D8E56AEB31E06C /* ChartsView.swift */; };
 		B9280DB2E4F595E5D5286095 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92801E688C614FD2722D2D1 /* MainView.swift */; };
 		B9280E318837F2729CA791B4 /* GarbageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9280A2488116BFB1DBB9AA7 /* GarbageDetails.swift */; };
@@ -48,6 +52,7 @@
 		C92DD0CA2B1283BF002C242B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = C92DD0C92B1283BF002C242B /* SwiftUICharts */; };
 		C93888702B11EC0600297C7B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C938886F2B11EC0600297C7B /* GoogleSignIn */; };
 		C93888722B11EC0600297C7B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C93888712B11EC0600297C7B /* GoogleSignInSwift */; };
+		C9C7DD032B134139005ADC34 /* TrashListDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DD022B134139005ADC34 /* TrashListDetails.swift */; };
 		C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */; };
 		C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE57F02B12B74200D17198 /* BalanceModel.swift */; };
 /* End PBXBuildFile section */
@@ -66,34 +71,38 @@
 		B447F8C12B12968100B62010 /* Khula-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-SemiBold.ttf"; sourceTree = "<group>"; };
 		B447F8C22B12968100B62010 /* Khula-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B447F8C32B12968100B62010 /* Khula-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Bold.ttf"; sourceTree = "<group>"; };
-		B447F8CC2B12C63000B62010 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		B447F8CE2B12C6D800B62010 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
-		B447F8D02B12C6E100B62010 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B928006F3840A08F16E994EC /* clientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B92800B54CE0A13B12E3F3F6 /* OldTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldTabBarView.swift; sourceTree = "<group>"; };
 		B92800CE2887044763913A0A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B9280136E2681A2DEF4B1F8B /* clientAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientAppApp.swift; sourceTree = "<group>"; };
 		B92801D2765D2ADADC09AB50 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B92801E688C614FD2722D2D1 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B9280250ED6A531E8AE7234F /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B92802539056A15A1F717818 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B928028038DB054A36234405 /* TrashListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashListView.swift; sourceTree = "<group>"; };
 		B92802C1DA3611136D2D5A6C /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B92802D1C43B531F4D993DE2 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B92803493A48B451F9EC5729 /* NftCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NftCollectionView.swift; sourceTree = "<group>"; };
 		B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGarbageTagView.swift; sourceTree = "<group>"; };
 		B92804CF6E5B03DEBFF8BBF3 /* ImagePickingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickingView.swift; sourceTree = "<group>"; };
+		B928054288436FF0CF625D4E /* TrashListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashListItem.swift; sourceTree = "<group>"; };
 		B92807D041F4DB1B078ABF52 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B92807D9F1DFC91FC4107473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B92807FEC341D34AF57C69AA /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		B928082E2694C2422ACA3F9D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B92808471353A0E40839971F /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B9280933602425E59B195E32 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B9280996E484DBB4A94F5AF4 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B9280A2488116BFB1DBB9AA7 /* GarbageDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarbageDetails.swift; sourceTree = "<group>"; };
+		B9280A3367B2E62E8B7D6451 /* RouterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		B9280A6AE0669B825B36A3EF /* CreateGarbageTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGarbageTagView.swift; sourceTree = "<group>"; };
 		B9280A7146370E459B3FEB02 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../UserProfileFlow/ProfileView.swift; sourceTree = "<group>"; };
 		B9280C0A1ED174034AFDA662 /* PickUpCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpCompleteView.swift; sourceTree = "<group>"; };
 		B9280C16B8D8E56AEB31E06C /* ChartsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		B9280D1D1916ADC5BAEDEFF3 /* NftAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NftAsset.swift; sourceTree = "<group>"; };
 		B9280D553FE2A6B0D4CCDEBF /* PickUpGarbageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpGarbageView.swift; sourceTree = "<group>"; };
 		B9280EE8AF43D31AA6AF9925 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C938886D2B11EBC600297C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9C7DD022B134139005ADC34 /* TrashListDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashListDetails.swift; sourceTree = "<group>"; };
 		C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceAmountView.swift; sourceTree = "<group>"; };
 		C9DE57F02B12B74200D17198 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,41 +134,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B447F8C92B12C5FE00B62010 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				B447F8D22B12DB4900B62010 /* NewGarbage */,
-				B447F8CB2B12C61800B62010 /* Router */,
-				B447F8CA2B12C61000B62010 /* TabBar */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		B447F8CA2B12C61000B62010 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				B447F8CC2B12C63000B62010 /* TabBarView.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		B447F8CB2B12C61800B62010 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				B447F8CE2B12C6D800B62010 /* RouterView.swift */,
-				B447F8D02B12C6E100B62010 /* Router.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		B447F8D22B12DB4900B62010 /* NewGarbage */ = {
-			isa = PBXGroup;
-			children = (
-				B92804480C671565BDDF1429 /* CreateGarbageTagView.swift */,
-			);
-			path = NewGarbage;
-			sourceTree = "<group>";
-		};
 		B92800737F0E276FCE6AA193 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +150,9 @@
 				B92802AAC2A2B6B63B3C09A2 /* MapTab */,
 				B92801B4862E893B6C4FCB05 /* CommonUI */,
 				B9280ABBBBB5481C5789F58A /* UserProfileFlow */,
+				B928097C51A664C9DC6E7FFA /* NewGarbage */,
+				B92805EF6CC1205D281F007E /* Router */,
+				B9280B6199879ECA6821BFDB /* TrashListFlow */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -200,7 +177,6 @@
 		B9280351845FBE6166A4A5BA /* clientApp */ = {
 			isa = PBXGroup;
 			children = (
-				B447F8C92B12C5FE00B62010 /* Modules */,
 				B447F8BC2B128D0000B62010 /* Resources */,
 				C938886D2B11EBC600297C7B /* Info.plist */,
 				B92803A0C4D38EE9CEFD1816 /* Assets.xcassets */,
@@ -218,10 +194,19 @@
 			children = (
 				B92802539056A15A1F717818 /* OnboardingView.swift */,
 				B928082E2694C2422ACA3F9D /* LoginView.swift */,
-				B92800B54CE0A13B12E3F3F6 /* OldTabBarView.swift */,
 				B92801E688C614FD2722D2D1 /* MainView.swift */,
+				B92808471353A0E40839971F /* TabBarView.swift */,
 			);
 			path = StartFlow;
+			sourceTree = "<group>";
+		};
+		B92805EF6CC1205D281F007E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B9280A3367B2E62E8B7D6451 /* RouterView.swift */,
+				B9280996E484DBB4A94F5AF4 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		B9280978122487EA6E56E2C8 = {
@@ -230,6 +215,14 @@
 				B92800737F0E276FCE6AA193 /* Products */,
 				B9280351845FBE6166A4A5BA /* clientApp */,
 			);
+			sourceTree = "<group>";
+		};
+		B928097C51A664C9DC6E7FFA /* NewGarbage */ = {
+			isa = PBXGroup;
+			children = (
+				B9280A6AE0669B825B36A3EF /* CreateGarbageTagView.swift */,
+			);
+			path = NewGarbage;
 			sourceTree = "<group>";
 		};
 		B9280A594BFB797528A054FB /* Preview Content */ = {
@@ -266,8 +259,18 @@
 				B9280C16B8D8E56AEB31E06C /* ChartsView.swift */,
 				B9280A7146370E459B3FEB02 /* ProfileView.swift */,
 				C9DE57EE2B12B6F400D17198 /* BalanceAmountView.swift */,
+				B92803493A48B451F9EC5729 /* NftCollectionView.swift */,
 			);
 			path = UserProfileFlow;
+			sourceTree = "<group>";
+		};
+		B9280B6199879ECA6821BFDB /* TrashListFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B928028038DB054A36234405 /* TrashListView.swift */,
+				C9C7DD022B134139005ADC34 /* TrashListDetails.swift */,
+			);
+			path = TrashListFlow;
 			sourceTree = "<group>";
 		};
 		B9280BA1FB7B1519F8B7F4BC /* Models */ = {
@@ -285,6 +288,8 @@
 				AC398E602B13218000555BA2 /* Nft.swift */,
 				AC398E622B1321BF00555BA2 /* Tag.swift */,
 				AC398E642B13224800555BA2 /* Challenge.swift */,
+				B9280D1D1916ADC5BAEDEFF3 /* NftAsset.swift */,
+				B928054288436FF0CF625D4E /* TrashListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				AC398E5F2B13215000555BA2 /* Translactionable.swift in Sources */,
 				B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */,
 				AC398E652B13224800555BA2 /* Challenge.swift in Sources */,
+				C9C7DD032B134139005ADC34 /* TrashListDetails.swift in Sources */,
 				B447F8BA2B12805300B62010 /* LocationService.swift in Sources */,
 				B9280E318837F2729CA791B4 /* GarbageDetails.swift in Sources */,
 				AC398E632B1321BF00555BA2 /* Tag.swift in Sources */,
@@ -387,17 +393,22 @@
 				B92802DDFB27742A2DBD1124 /* HeaderView.swift in Sources */,
 				B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */,
 				B92806C0BA507BEC87094404 /* ImagePickingView.swift in Sources */,
-				B447F8CF2B12C6D800B62010 /* RouterView.swift in Sources */,
 				B9280B2B6F3DE2B8A7277801 /* PickUpCompleteView.swift in Sources */,
-				B928003995C15EACD6A619AA /* CreateGarbageTagView.swift in Sources */,
 				B9280CC5BD04F2D043F7EC23 /* UserDefaults.swift in Sources */,
 				B9280D755092347F8E00E991 /* ChartsView.swift in Sources */,
-				B447F8CD2B12C63000B62010 /* TabBarView.swift in Sources */,
 				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
 				AC398E5D2B131EFC00555BA2 /* Account.swift in Sources */,
 				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,
 				C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */,
 				B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */,
+				B9280D3CF23B0B537A96CF71 /* CreateGarbageTagView.swift in Sources */,
+				B928060E5155EDF13D5F1962 /* TabBarView.swift in Sources */,
+				B92803F51272F83B70EDA8B9 /* RouterView.swift in Sources */,
+				B92807FD2A5B5EFF3BA3E10F /* Router.swift in Sources */,
+				B9280A7A680695B51AFC4527 /* NftCollectionView.swift in Sources */,
+				B92801DCF7169EA3D681388C /* NftAsset.swift in Sources */,
+				B92803FFF3AD696D7783D3BF /* TrashListView.swift in Sources */,
+				B9280B30B8D2949BA11B4D47 /* TrashListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clientApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4BBYP7GDM3;
+				DEVELOPMENT_TEAM = R936XH3P29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clientApp/Info.plist;
@@ -505,7 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clientApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4BBYP7GDM3;
+				DEVELOPMENT_TEAM = R936XH3P29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clientApp/Info.plist;

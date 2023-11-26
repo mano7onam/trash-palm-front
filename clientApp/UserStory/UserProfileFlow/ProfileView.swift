@@ -11,6 +11,8 @@ import SwiftUI
 struct ProfileView: View {
 	
 	@EnvironmentObject var vm: AppState
+	@EnvironmentObject var router: Router
+	@Environment(\.presentationMode) var presentationMode
 	
 	var body: some View {
 		VStack {
@@ -48,7 +50,7 @@ struct ProfileView: View {
 			}
 				.padding(.top, -45)
 				.padding(.leading, 8)
-			NavigationLink(destination: ChartsView()) {
+//			NavigationLink(destination: ChartsView()) {
 				Text("Balance")
 					.padding()
 					.font(.palmRegular)
@@ -59,7 +61,11 @@ struct ProfileView: View {
 						RoundedRectangle(cornerRadius: 100, style: .circular)
 							.stroke(Color.olive, lineWidth: 1)
 					)
-			}
+					.onTapGesture {
+						router.moveTo(.balance)
+						presentationMode.wrappedValue.dismiss()
+					}
+			//			}
 			Button(action: {
 				print("challenges")
 			}) {

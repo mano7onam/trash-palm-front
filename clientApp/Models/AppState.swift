@@ -29,8 +29,16 @@ class AppState: ObservableObject {
 	@Published private(set) var allMarkers: [Place] = []
 	@Published var selectedPlace: Place?
 	
+	// NFT
+	@Published private(set) var allNftAssets: [NftAsset] = []
+	
+	// TrashList
+	@Published private(set) var allTrashLists: [TrashListItem] = []
+	
 	init() {
 		authService.check()
+		allNftAssets = mockNftAssets
+		allTrashLists = mockTrashList
         backendService.setEmail(email: self.login)
         
         Task {
@@ -59,3 +67,19 @@ class AppState: ObservableObject {
 //	   Place(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
 //	   Place(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
 //   ]
+
+
+private let mockNftAssets = [
+	NftAsset(imageName: "nft1", text: "100 cleanings"),
+	NftAsset(imageName: "nft2", text: "50 cleanings"),
+	NftAsset(imageName: "nft3", text: "Saturday cleaning"),
+	NftAsset(imageName: "nft4", text: "Clean beach"),
+]
+
+
+private let mockTrashList = [
+	TrashListItem(imageName: "cameraboy", text: "Created by you"),
+	TrashListItem(imageName: "voted", text: "Voted by you"),
+	TrashListItem(imageName: "binboy", text: "Cleaned by you"),
+	TrashListItem(imageName: "all_types", text: "All types"),
+]

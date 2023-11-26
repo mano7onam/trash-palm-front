@@ -11,6 +11,7 @@ import SwiftUI
 struct HeaderView: View {
 	
 	@EnvironmentObject var vm: AppState
+    @EnvironmentObject var router: Router
 	
 	var body: some View {
 		VStack {

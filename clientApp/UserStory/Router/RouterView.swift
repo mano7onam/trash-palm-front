@@ -23,28 +23,28 @@ struct RouterView: View {
 							OnboardingView()
 						case true:
 							Group {
-								MapView()
-									.opacity(router.currentScreen == .map ? 1 : 0)
+								NavigationView {
+									MapView()
+										.opacity(router.currentScreen == .map ? 1 : 0)
+								}
 								
 								switch router.currentScreen {
 									case .map:
 										EmptyView()
 									case .balance:
-										Rectangle()
-											.fill(Color.white)
-											.overlay {
-												Text("Balance!")
-											}
+										NavigationView {
+											ChartsView()
+										}
 									case .addTrash:
 										CreateGarbageTagView()
 									case .garbageDetails:
-										GarbageDetails()
+										NavigationView {
+											GarbageDetails()
+										}
 									case .listOfGarbage:
-										Rectangle()
-											.fill(Color.white)
-											.overlay {
-												Text("List of garbage!")
-											}
+										NavigationView {
+											TrashListView()
+										}
 									case .challenges:
 										Rectangle()
 											.fill(Color.white)

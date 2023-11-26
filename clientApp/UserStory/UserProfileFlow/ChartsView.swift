@@ -54,26 +54,30 @@ struct ChartsView: View {
                 .padding()
             Text("Review caterories")
             HStack {
-                
                 NavigationLink(destination: BalanceAmountView(balanceType: .tokens)) {
-                    Text("TOKENS")
-                        .frame(width: 80, height: 150)
-                        .background(Color.olive)
+                    VStack {
+                        Text("Tokens")
+                            .foregroundColor(.white)
+                        Image(.token)
+                    }
+                        .frame(width: 80, height: 120)
+                        .background(Color.sunny)
                         .clipShape(RoundedCorners(tl: 15, tr: 30, bl: 15, br: 15))
-                        .foregroundColor(.white)
                 }
                 Spacer().frame(width: 32)
                 NavigationLink(destination: BalanceAmountView(balanceType: .nft)) {
-                    Text("NFT")
-                        .frame(width: 80, height: 150)
-                        .background(Color.olive)
-                        .clipShape(RoundedCorners(tl: 10, tr: 30, bl: 10, br: 10))
-                        .foregroundColor(.white)
+                    VStack {
+                        Text("NFT")
+                            .foregroundColor(.white)
+                        Image("NFT")
+                    }
+                        .frame(width: 80, height: 120)
+                        .background(Color.sunny)
+                        .clipShape(RoundedCorners(tl: 15, tr: 30, bl: 15, br: 15))
                 }
             }
             
         }
-            .padding(.top, -60)
             .onAppear() {
                 updateData()
             }

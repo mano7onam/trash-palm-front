@@ -11,6 +11,7 @@ extension Font {
 	static let palmTitle: Font = .custom("Alata", fixedSize: 24)
 	static let palmTitle30: Font = .custom("Alata", fixedSize: 30)
 	static let palmRegular: Font = .custom("Khula", fixedSize: 16)
+	static let palmRegular22: Font = .custom("Khula", fixedSize: 22)
 	
 	
 	static func alata(fixedSize: CGFloat) -> Font {

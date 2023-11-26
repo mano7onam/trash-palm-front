@@ -31,7 +31,7 @@ struct ImagePickingView: View {
 				Button(action: {
 					self.showingActionSheet = true
 				}) {
-					Image(systemName: "plus")
+					Image(.camera)
 						.resizable()
 						.scaledToFit()
 						.frame(width: 70, height: 70)
@@ -39,8 +39,14 @@ struct ImagePickingView: View {
 						.clipShape(Rectangle())
 				}
 				.frame(width: 230, height: 400)
-				.background(Color.olive)
+				.background(Color.olive.opacity(0.3))
 				.clipShape(RoundedRectangle(cornerRadius: 20))
+				.overlay(alignment: .bottom) {
+					Text("Add Photo")
+						.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
+						.font(.khula(fixedSize: 16))
+						.padding(.bottom, 24)
+				}
 				
 				ForEach(images.indices, id: \.self) { index in
 					Button(action: {
