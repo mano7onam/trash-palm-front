@@ -151,15 +151,26 @@ struct CreateGarbageTagView: View {
 				.padding(.horizontal, 23)
 				.padding(.bottom, 29)
 				
-				Button {
-					print("open donate")
-				} label: {
-					Text("Donate")
-						.font(.alata(fixedSize: 18))
-						.frame(width: 136, height: 44)
-						.background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
-				}
-				.buttonStyle(.plain)
+                HStack {
+                    Button {
+                        print("open donate")
+                    } label: {
+                        Text("Donate")
+                            .font(.alata(fixedSize: 18))
+                            .frame(width: 136, height: 44)
+                            .background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
+                    }
+                    .buttonStyle(.plain)
+                    Button {
+                        print("send")
+                    } label: {
+                        Text("Add")
+                            .font(.alata(fixedSize: 18))
+                            .frame(width: 136, height: 44)
+                            .background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
+                    }
+                    .buttonStyle(.plain)
+                }
 				
 				Spacer()
 			}
