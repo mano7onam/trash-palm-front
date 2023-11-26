@@ -17,7 +17,7 @@ class AppState: ObservableObject {
 	
 	// UserAuth
 	@Published var givenName: String = ""
-	@Published var login: String = ""
+	@Published var login: String = "some@gmail.com"
 	@Published var profilePicUrl: String = ""
 	@AppStorage("isLoggedIn") var isLoggedIn: Bool = false
 	@Published var errorMessage: String = ""
@@ -42,11 +42,12 @@ class AppState: ObservableObject {
 		authService.check()
 		allNftAssets = mockNftAssets
 		allTrashLists = mockTrashList
-        backendService.setEmail(email: self.login)
 		myOrders = mockOrders
         
         Task { @MainActor in
             do {
+				
+				try await Task.sleep(nanoseconds: 1 * NSEC_PER_SEC)
                 let tags = try await backendService.getTags()
                 self.allMarkers = getPlacesFromTags(tags: tags)
                 
