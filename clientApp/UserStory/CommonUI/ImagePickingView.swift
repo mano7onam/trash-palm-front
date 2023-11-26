@@ -68,7 +68,7 @@ struct ImagePickingView: View {
 		}
 		.sheet(isPresented: $showingImagePicker) {
 			if sourceType == .camera {
-				ImagePicker(images: $images, sourceType: $sourceType)
+				ImagePicker(images: $images, sourceType: sourceType)
 			} else {
 				PhotoPicker(images: $images)
 			}
@@ -78,7 +78,7 @@ struct ImagePickingView: View {
 
 struct ImagePicker: UIViewControllerRepresentable {
 	@Binding var images: [UIImage]
-	@Binding var sourceType: UIImagePickerController.SourceType
+	let sourceType: UIImagePickerController.SourceType
 	
 	func makeUIViewController(context: Context) -> UIImagePickerController {
 		let picker = UIImagePickerController()

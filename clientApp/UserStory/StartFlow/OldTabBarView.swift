@@ -9,18 +9,11 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct TabBarView: View {
-	@State private var mockAnnotations = [
-		Place(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-		Place(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-		Place(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-		Place(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-	]
-	
+struct OldTabBarView: View {
 	var body: some View {
 		NavigationView {
 			TabView {
-				MapView(places: mockAnnotations)
+				MapView()
 					.tabItem {
 						Image(systemName: "1.circle")
 						Text("Tab 1")

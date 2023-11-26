@@ -14,8 +14,10 @@ struct clientAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+			RouterView()
+//            MainView()
 				.preferredColorScheme(.light)
-        }.environmentObject(userAuth)
+        }
+		.environmentObject(userAuth)
     }
 }

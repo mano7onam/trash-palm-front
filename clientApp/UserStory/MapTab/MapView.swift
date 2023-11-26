@@ -10,18 +10,8 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-	enum ActiveSheet: Identifiable, Hashable {
-		case details(Place)
-		case creation(Place)
-		
-		var id: Int {
-			hashValue
-		}
-	}
-
-	let places: [Place]
-
-	@State private var activeSheet: ActiveSheet?
+	@EnvironmentObject private var appState: AppState
+	@EnvironmentObject private var router: Router
 		
 	@State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
 	
@@ -32,7 +22,8 @@ struct MapView: View {
 				.frame(width: 20, height: 20)
 				.highPriorityGesture(
 					TapGesture().onEnded {
-						activeSheet = .details(place)
+						appState.selectedPlace = place
+						router.moveTo(.garbageDetails)
 					}
 				)
 		}
@@ -43,23 +34,16 @@ struct MapView: View {
 		ZStack{
 			MapReader { reader in
 				Map(position: $position) {
-					ForEach(places) { place in
+					ForEach(appState.allMarkers) { place in
 						makeAnnotation(place: place)
 					}
 				}
 				.onTapGesture { location in
-					guard activeSheet == nil,
+					guard appState.selectedPlace == nil,
 						let pinLocation = reader.convert(location, from: .local)
 					else { return }
-					activeSheet = .creation(Place(name: "", coordinate: pinLocation))
-				}
-				.sheet(item: $activeSheet) { sheet in
-					switch sheet {
-						case let .creation(place):
-								CreateGarbageTagView(place: place)
-						case let .details(place):
-								GarbageDetails(place: place)
-					}
+					appState.selectedPlace = Place(name: "", coordinate: pinLocation)
+					router.moveTo(.addTrash)
 				}
 			}
 			HeaderView()

@@ -17,10 +17,12 @@ struct OnboardingView: View {
 		TabView(selection: $selectedTab) {
 			ForEach(onboardingData.indices) { index in
 				OnboardingPageView(data: onboardingData[index], isLastPage: index == onboardingData.count - 1) {
-					if index == onboardingData.count - 1 {
-						vm.onboardingPassed = true
-					} else {
-						selectedTab += 1
+					withAnimation {
+						if index == onboardingData.count - 1 {
+							vm.onboardingPassed = true
+						} else {
+							selectedTab += 1
+						}
 					}
 				}
 			}
@@ -68,4 +70,5 @@ struct OnboardingPageView: View {
 
 #Preview {
     OnboardingView()
+		.environmentObject(AppState())
 }
