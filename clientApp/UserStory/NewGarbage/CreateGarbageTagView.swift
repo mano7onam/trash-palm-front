@@ -117,33 +117,15 @@ struct CreateGarbageTagView: View {
 					Text("Add new trash")
 						.font(.alata(fixedSize: 24))
 				}
+				Spacer().frame(height: 16)
 				
-				Button {
-					commentIsFocused = false
-					withAnimation {
-						showActionsSheet = true
+				ImagePickingView(selectedImages: $selectedImages)
+					.padding()
+					.frame(maxHeight: 400)
+					.onTapGesture {
+						commentIsFocused = false
 					}
-				} label: {
-					RoundedRectangle(cornerRadius: 20, style: .continuous)
-						.fill(Color(hue: 0.283, saturation: 0.04, brightness: 1))
-						.overlay(alignment: .bottom) {
-							Text("Add Photo")
-								.foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.13))
-								.font(.khula(fixedSize: 16))
-								.padding(.bottom, 24)
-						}
-						.overlay {
-							Image(.camera)
-								.resizable()
-								.scaledToFit()
-								.padding(EdgeInsets(top: 28, leading: 29, bottom: 66, trailing: 48))
-						}
-						.frame(height: 310)
-						.padding(.horizontal, 45)
-						.padding(.vertical, 44)
-				}
-				.buttonStyle(.plain)
-				
+				Spacer().frame(height: 16)
 				
 				ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
 					RoundedRectangle(cornerRadius: 20)
