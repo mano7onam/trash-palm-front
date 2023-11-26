@@ -40,10 +40,10 @@ struct LoginView: View {
         Text("Login")
                 .bold()
                 .padding()
-                .frame(minWidth: 300)
+                .frame(minWidth: 200)
                 .background(Color.olive)
                 .foregroundColor(.white)
-                .cornerRadius(10)
+                .clipShape(RoundedCorners(tl: 0, tr: 30, bl: 30, br: 30))
       }
               .padding()
               .alert(isPresented: $showingAlert) {
@@ -59,12 +59,15 @@ struct LoginView: View {
          vm.authService.signIn()
         }) {
           Text("Sign Up with Google")
-                  .bold()
-                  .padding()
-                  .frame(minWidth: 300)
-                  .background(Color.olive)
-                  .foregroundColor(.white)
-                  .cornerRadius(10)
+                .padding()
+                .font(.palmRegular)
+                .frame(minWidth: 300)
+                .background(Color.white)
+                .foregroundColor(Color.black)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 100, style: .circular)
+                        .stroke(Color.olive, lineWidth: 1)
+                )
         }
         Text("OR")
                 .bold()
@@ -72,12 +75,15 @@ struct LoginView: View {
           showingAlert = true
         }) {
           Text("Sign Up with Email")
-                  .bold()
-                  .padding()
-                  .frame(minWidth: 300)
-                  .background(Color.olive)
-                  .foregroundColor(.white)
-                  .cornerRadius(10)
+                .padding()
+                .font(.palmRegular)
+                .frame(minWidth: 300)
+                .background(Color.white)
+                .foregroundColor(Color.black)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 100, style: .circular)
+                        .stroke(Color.olive, lineWidth: 1)
+                )
         }
         .alert(isPresented: $showingAlert) {
           Alert(title: Text("Coming Soon"), message: Text("Use Google auth"), dismissButton: .default(Text("Got it!")))
@@ -94,8 +100,8 @@ struct LoginView: View {
   var body: some View {
     VStack {
       Spacer()
-      AsyncImage(url: URL(string: vm.profilePicUrl)).frame(width: 200, height: 200)
-                                                    .clipShape(Circle())
+      Image("login_logo")
+            .padding(.trailing, 50)
       Spacer()
       Picker("Options", selection: $loginType) {
         Text("Login").tag(LoginType.login)
@@ -111,4 +117,9 @@ struct LoginView: View {
       }
     }
   }
+}
+
+
+#Preview {
+    LoginView().environmentObject(AppState())
 }
