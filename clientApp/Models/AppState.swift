@@ -80,8 +80,16 @@ private let mockNftAssets = [
 
 
 private let mockTrashList = [
-	TrashListItem(imageName: "by_you", text: "Created by you"),
-	TrashListItem(imageName: "voted", text: "Voted by you"),
-	TrashListItem(imageName: "bin", text: "Cleaned by you"),
-	TrashListItem(imageName: "all_types", text: "All types"),
+    TrashListItem(imageName: "by_you", detailsImageName: "cameraboy", text: "Created by you", list: [
+        .init(name: "TestList", amount: 5)
+    ]),
+    TrashListItem(imageName: "voted", detailsImageName: "vote", text: "Voted by you", list: [
+        .init(name: "TestList", amount: 5)
+    ]),
+    TrashListItem(imageName: "bin", detailsImageName: "binboy", text: "Cleaned by you", list: [
+        .init(name: "TestList", amount: 5)
+    ]),
+    TrashListItem(imageName: "all_types", detailsImageName: "all_types", text: "All types", list: [
+        .init(name: "TestList", amount: 5)
+    ]),
 ]
