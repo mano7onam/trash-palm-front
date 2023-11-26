@@ -7,18 +7,18 @@
 
 import Foundation
 
-enum TagType: String {
+enum TagType: String, Decodable {
     case user = "USER"
     case challenge = "CHALLENGE"
 }
 
-enum TagStatus: String {
+enum TagStatus: String, Decodable {
     case active = "ACTIVE"
     case processing = "PROCESSING"
     case finished = "FINISHED"
 }
 
-struct Tag: Transactionable {
+struct Tag: Transactionable, Decodable {
     let id: String
     let lon: Double
     let lat: Double

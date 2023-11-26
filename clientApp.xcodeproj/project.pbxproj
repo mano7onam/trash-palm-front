@@ -12,6 +12,7 @@
 		AC398E612B13218000555BA2 /* Nft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E602B13218000555BA2 /* Nft.swift */; };
 		AC398E632B1321BF00555BA2 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E622B1321BF00555BA2 /* Tag.swift */; };
 		AC398E652B13224800555BA2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E642B13224800555BA2 /* Challenge.swift */; };
+		AC5CBAC92B1338BA008CF7B0 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */; };
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
 		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
@@ -57,6 +58,7 @@
 		AC398E602B13218000555BA2 /* Nft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nft.swift; sourceTree = "<group>"; };
 		AC398E622B1321BF00555BA2 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		AC398E642B13224800555BA2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
 		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				B92807D041F4DB1B078ABF52 /* AuthService.swift */,
 				B9280250ED6A531E8AE7234F /* UserDefaults.swift */,
+				AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
 				C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */,
 				B928067C69B44EA1ECEEDE43 /* OnboardingData.swift in Sources */,
+				AC5CBAC92B1338BA008CF7B0 /* BackendService.swift in Sources */,
 				AC398E5F2B13215000555BA2 /* Translactionable.swift in Sources */,
 				B92800EB6C85586D48065928 /* PickUpGarbageView.swift in Sources */,
 				AC398E652B13224800555BA2 /* Challenge.swift in Sources */,
