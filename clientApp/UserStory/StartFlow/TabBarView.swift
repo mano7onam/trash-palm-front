@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
 	@EnvironmentObject private var router: Router
+	@EnvironmentObject private var appState: AppState
 	
     var body: some View {
 		GeometryReader { proxy in
@@ -41,6 +42,7 @@ struct TabBarView: View {
 						}
 						.frame(width: proxy.size.width / 5)
 						.onTapGesture {
+							appState.selectedPlace = nil
 							router.moveTo(screen)
 						}
 					}
