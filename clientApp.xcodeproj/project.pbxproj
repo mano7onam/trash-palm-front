@@ -14,6 +14,7 @@
 		AC398E652B13224800555BA2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E642B13224800555BA2 /* Challenge.swift */; };
 		AC5CBAC92B1338BA008CF7B0 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */; };
 		B4076FEF2B135A3B00252D07 /* MyOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4076FEE2B135A3B00252D07 /* MyOrder.swift */; };
+		B4076FF22B136D3400252D07 /* CheckCleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4076FF12B136D3400252D07 /* CheckCleaningView.swift */; };
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
 		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
@@ -67,6 +68,7 @@
 		AC398E642B13224800555BA2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 		B4076FEE2B135A3B00252D07 /* MyOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrder.swift; sourceTree = "<group>"; };
+		B4076FF12B136D3400252D07 /* CheckCleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCleaningView.swift; sourceTree = "<group>"; };
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
 		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		B4076FF02B136D2400252D07 /* CheckCleaning */ = {
+			isa = PBXGroup;
+			children = (
+				B4076FF12B136D3400252D07 /* CheckCleaningView.swift */,
+			);
+			path = CheckCleaning;
+			sourceTree = "<group>";
+		};
 		B447F8BC2B128D0000B62010 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 		B9280160AB43B27AA78D0DBD /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				B4076FF02B136D2400252D07 /* CheckCleaning */,
 				AC5CBACA2B135601008CF7B0 /* Utils */,
 				B9280A8F2A7D855FFA8E97D4 /* CleanUpFlow */,
 				B9280531D18AD3F815A6E975 /* StartFlow */,
@@ -413,6 +424,7 @@
 				B9280FAEF19072C529DA2A79 /* ProfileView.swift in Sources */,
 				AC398E5D2B131EFC00555BA2 /* Account.swift in Sources */,
 				B9280ACD5A8D9415E3D02911 /* Colors.swift in Sources */,
+				B4076FF22B136D3400252D07 /* CheckCleaningView.swift in Sources */,
 				C9DE57EF2B12B6F400D17198 /* BalanceAmountView.swift in Sources */,
 				B9280CA96C6D75AE0769FB50 /* Fonts.swift in Sources */,
 				B9280D3CF23B0B537A96CF71 /* CreateGarbageTagView.swift in Sources */,

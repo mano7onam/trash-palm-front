@@ -51,6 +51,8 @@ struct RouterView: View {
 											.overlay {
 												Text("Challenges!")
 											}
+									case .checkCleaning:
+										CheckCleaningView()
 								}
 							}
 							.background(Color.white)

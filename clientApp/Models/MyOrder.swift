@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyOrder: Identifiable {
+struct MyOrder: Identifiable, Hashable {
 	enum Status {
 		case created
 		case reviewRequested

@@ -36,7 +36,7 @@ class AppState: ObservableObject {
 	@Published private(set) var allTrashLists: [TrashListItem] = []
 	
 	// My orders
-	@Published private(set) var myOrders = [MyOrder]()
+	@Published var myOrders = [MyOrder]()
 	
 	init() {
 		authService.check()

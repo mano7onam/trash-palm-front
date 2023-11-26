@@ -14,6 +14,7 @@ enum Screen: Hashable, CaseIterable, Identifiable {
 	case garbageDetails
 	case listOfGarbage
 	case challenges
+	case checkCleaning
 	
 	var id: Int { hashValue }
 }
