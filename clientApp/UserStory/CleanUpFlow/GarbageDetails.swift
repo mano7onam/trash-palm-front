@@ -19,14 +19,11 @@ struct GarbageDetails: View {
 			Text("Garbage details")
 				.font(.title)
 			TabView {
-				ForEach(0..<5) { index in
-					Image("image(index)")
-						.resizable()
-						.scaledToFill()
-						.background(Color.red)
-						.frame(width: 230, height: 230 * 16 / 9 )
-						.clipShape(RoundedRectangle(cornerRadius: 30))
-				}
+                ForEach(appState.selectedPlace?.tag.photoUrls ?? [], id: \.self) { photoUrl in
+                    AsyncImage(url: photoUrl)
+                        .frame(width: 230, height: 230 * 16 / 9)
+                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                }
 			}
 			.tabViewStyle(PageTabViewStyle())
 			

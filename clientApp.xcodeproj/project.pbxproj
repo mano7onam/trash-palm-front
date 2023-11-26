@@ -13,6 +13,7 @@
 		AC398E632B1321BF00555BA2 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E622B1321BF00555BA2 /* Tag.swift */; };
 		AC398E652B13224800555BA2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC398E642B13224800555BA2 /* Challenge.swift */; };
 		AC5CBAC92B1338BA008CF7B0 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */; };
+		AC5CBACC2B135618008CF7B0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CBACB2B135618008CF7B0 /* Utils.swift */; };
 		B447F8BA2B12805300B62010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B447F8B92B12805300B62010 /* LocationService.swift */; };
 		B447F8BE2B128D0E00B62010 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */; };
 		B447F8C42B12968100B62010 /* Khula-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447F8BF2B12968100B62010 /* Khula-Light.ttf */; };
@@ -64,6 +65,7 @@
 		AC398E622B1321BF00555BA2 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		AC398E642B13224800555BA2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		AC5CBAC82B1338BA008CF7B0 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		AC5CBACB2B135618008CF7B0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B447F8B92B12805300B62010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B447F8BD2B128D0E00B62010 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
 		B447F8BF2B12968100B62010 /* Khula-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Light.ttf"; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC5CBACA2B135601008CF7B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC5CBACB2B135618008CF7B0 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B447F8BC2B128D0000B62010 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		B9280160AB43B27AA78D0DBD /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				AC5CBACA2B135601008CF7B0 /* Utils */,
 				B9280A8F2A7D855FFA8E97D4 /* CleanUpFlow */,
 				B9280531D18AD3F815A6E975 /* StartFlow */,
 				B92802AAC2A2B6B63B3C09A2 /* MapTab */,
@@ -374,7 +385,6 @@
 				B928002D6C1116337815165F /* clientAppApp.swift in Sources */,
 				B9280702288E030A226F756F /* AuthService.swift in Sources */,
 				AC398E612B13218000555BA2 /* Nft.swift in Sources */,
-				B447F8D12B12C6E100B62010 /* Router.swift in Sources */,
 				B928045C9E340B4630E834D4 /* Place.swift in Sources */,
 				B92804B062B0C1FBA02844A0 /* AppState.swift in Sources */,
 				C9DE57F12B12B74200D17198 /* BalanceModel.swift in Sources */,
@@ -389,6 +399,7 @@
 				AC398E632B1321BF00555BA2 /* Tag.swift in Sources */,
 				B9280EF949DFC42D6C940BF6 /* OnboardingView.swift in Sources */,
 				B9280F524033A56CDA4E5294 /* LoginView.swift in Sources */,
+				AC5CBACC2B135618008CF7B0 /* Utils.swift in Sources */,
 				B9280DB2E4F595E5D5286095 /* MainView.swift in Sources */,
 				B92802DDFB27742A2DBD1124 /* HeaderView.swift in Sources */,
 				B9280B5D16BAE7CFDDCDFFDA /* MapView.swift in Sources */,
