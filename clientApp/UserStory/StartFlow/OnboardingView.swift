@@ -37,7 +37,7 @@ struct OnboardingPageView: View {
 	
 	var body: some View {
 		VStack {
-			Image(systemName: data.imageName)
+			Image(data.imageName)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
 				.padding(30)
@@ -47,7 +47,7 @@ struct OnboardingPageView: View {
 			Spacer().frame(height: 20)
 			Text(data.description)
 				.font(.subheadline)
-				.foregroundColor(.gray)
+				.foregroundColor(.palmSecondary)
 				.multilineTextAlignment(.center)
 				.padding()
 			Spacer()
@@ -55,12 +55,17 @@ struct OnboardingPageView: View {
 				Text(isLastPage ? "Finish" : "Next")
 					.bold()
 					.padding()
+                    .frame(minWidth: 200)
 					.background(Color.olive)
 					.foregroundColor(.white)
-					.cornerRadius(10)
+                    .clipShape(RoundedCorners(tl: 0, tr: 30, bl: 30, br: 30))
 				
 			}
 			Spacer()
 		}
 	}
+}
+
+#Preview {
+    OnboardingView()
 }

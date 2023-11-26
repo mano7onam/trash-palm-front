@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Color {
+	static let palmSecondary = Color(hex: "37363B")
 	static let olive = Color(hex: "81A33F")
 	static let oliveSecondary = Color(hex: "D2E7C3")
 }

@@ -15,8 +15,7 @@ struct OnboardingData: Identifiable, Hashable {
 }
 
 let onboardingData = [
-	OnboardingData(imageName: "1.circle", title: "Hello!", description: "Description 1"),
-	OnboardingData(imageName: "2.circle", title: "Title 2", description: "Description 2"),
-	OnboardingData(imageName: "3.circle", title: "Title 3", description: "Description 3"),
-	OnboardingData(imageName: "4.circle", title: "Title 4", description: "Description 4")
+	OnboardingData(imageName: "onboarding1", title: "Welcome to Trash Palm", description: "Trash Palm is the #1 source \nto earn rewards just \nby cleaing streets in Cyprus"),
+	OnboardingData(imageName: "onboarding2", title: "Clean, Earn Tokens,\nGet Money", description: "Contribute to a more sustainable \ncommunity by cleaning streets!\nEarn tockens and redeem it to real money"),
+	OnboardingData(imageName: "onboarding3", title: "Help the environment\nwhile you earn", description: "Join the movement to living more sustainably and feeling good about the clean roadsides"),
 ]
