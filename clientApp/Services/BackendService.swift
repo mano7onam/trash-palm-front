@@ -33,7 +33,7 @@ final class BackendService {
 
     func createTag(lon: Double, lat: Double, title: String, description: String, owner: String, prize: Int) async throws {
         let id = UUID()
-        let url = URL(string: "http://172.60.8.23:8080/tags")!
+        let url = URL(string: "http://172.60.8.14:8080/tags")!
 
         let json: [String: Any] = [
             "id": id.uuidString,
@@ -58,7 +58,7 @@ final class BackendService {
     }
 
     func getTags() async throws -> [Tag] {
-        let url = URL(string: "http://172.60.8.23:8080/tags")!
+        let url = URL(string: "http://172.60.8.14:8080/tags")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("some@gmail.com", forHTTPHeaderField: "email")
@@ -67,6 +67,25 @@ final class BackendService {
         let data = try await fetchData(from: url)
         let tags = try JSONDecoder().decode([Tag].self, from: data)
         return tags
+    }
+    
+    func getAccount() async throws -> Account {
+        let url = URL(string: "http://172.60.8.14:8080/account")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("some@gmail.com", forHTTPHeaderField: "email")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let data = try await fetchData(from: url)
+        let account = try JSONDecoder().decode(Account.self, from: data)
+        return account
+    }
+    
+    func getNfts() async throws -> [NftAsset] {
+        let account = try await getAccount()
+        return account.nfts.map { nft in
+            NftAsset(imageName: nft.id, text: String(nft.value))
+        }
     }
     
 }

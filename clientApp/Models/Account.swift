@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Account: Transactionable {
+struct Account: Transactionable, Decodable {
     let email: String
     let cryptoId: String
     let cryptoPrivateKey: String

@@ -45,6 +45,8 @@ class AppState: ObservableObject {
             do {
                 let tags = try await backendService.getTags()
                 self.allMarkers = getPlacesFromTags(tags: tags)
+                
+                self.allNftAssets = try await backendService.getNfts()
             }
             catch {
                 print(error.localizedDescription.debugDescription)
