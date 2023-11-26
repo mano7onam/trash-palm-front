@@ -33,7 +33,7 @@ final class BackendService {
 
     func createTag(lon: Double, lat: Double, title: String, description: String, owner: String, prize: Int) async throws {
         let id = UUID()
-        let url = URL(string: "http://localhost:8080/tags")!
+        let url = URL(string: "http://172.60.8.23:8080/tags")!
 
         let json: [String: Any] = [
             "id": id.uuidString,
@@ -58,7 +58,7 @@ final class BackendService {
     }
 
     func getTags() async throws -> [Tag] {
-        let url = URL(string: "http://localhost:8080/tags")!
+        let url = URL(string: "http://172.60.8.23:8080/tags")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("some@gmail.com", forHTTPHeaderField: "email")
