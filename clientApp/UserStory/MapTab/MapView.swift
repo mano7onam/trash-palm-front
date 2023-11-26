@@ -42,7 +42,7 @@ struct MapView: View {
 					guard appState.selectedPlace == nil,
 						let pinLocation = reader.convert(location, from: .local)
 					else { return }
-					appState.selectedPlace = Place(name: "", coordinate: pinLocation)
+                    appState.selectedPlace = Place(name: "", coordinate: pinLocation, tag: Tag.mock())
 					router.moveTo(.addTrash)
 				}
 			}

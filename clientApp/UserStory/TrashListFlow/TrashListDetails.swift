@@ -9,6 +9,11 @@ import Foundation
 import SwiftUI
 
 struct TrashListDetails: View {
+    let item: TrashListItem
+    
+    init(item: TrashListItem) {
+        self.item = item
+    }
     var body: some View {
         EmptyView()
     }

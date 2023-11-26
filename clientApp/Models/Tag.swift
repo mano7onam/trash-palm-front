@@ -34,4 +34,24 @@ struct Tag: Transactionable, Decodable, Hashable {
     var status: TagStatus
     var claimer: String?
     var voters: [String]
+    
+    static func mock() -> Self {
+        Tag(
+            id: "1",
+            lon: 0.0,
+            lat: 0.0,
+            title: "Title",
+            description: "Description",
+            owner: "Owner",
+            cryptoId: "CryptoId",
+            cryptoPrivateKey: "CryptoPrivateKey",
+            prize: 1000,
+            photoUrls: ["url1", "url2"],
+            type: .challenge, // Замените на ваш тип TagType
+            comments: ["Comment1", "Comment2"],
+            status: .active, // Замените на ваш статус TagStatus
+            claimer: "Claimer",
+            voters: ["Voter1", "Voter2"]
+        )
+    }
 }
