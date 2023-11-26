@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Nft: Equatable, Decodable {
+struct Nft: Equatable, Codable {
     let id: String
     let data: Data
     let value: Int64

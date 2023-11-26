@@ -161,4 +161,11 @@ final class BackendService {
         return challenges
     }
     
+    func createChallenge(challenge: Challenge) async throws {
+        let url = URL(string: backendUrl + "/challenges")!
+
+        let jsonData = try JSONEncoder().encode(challenge)
+        let _ = try await postData(jsonData, to: url)
+    }
+    
 }
