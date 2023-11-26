@@ -52,7 +52,6 @@ class AppState: ObservableObject {
                 print(error)
             }
         }
-        
 	}
     
     func getPlacesFromTags(tags: [Tag]) -> [Place] {
@@ -63,14 +62,6 @@ class AppState: ObservableObject {
     }
 }
 
-//private let mockAnnotations = [
-//	Place(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-//	   Place(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-//	   Place(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-//	   Place(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-//   ]
-
-
 private let mockNftAssets = [
 	NftAsset(imageName: "nft1", text: "100 cleanings"),
 	NftAsset(imageName: "nft2", text: "50 cleanings"),
@@ -78,18 +69,29 @@ private let mockNftAssets = [
 	NftAsset(imageName: "nft4", text: "Clean beach"),
 ]
 
+enum ListType {
+	case byYou([TrashItem])
+	case voted([TrashItem])
+	case cleanedByYou([TrashItem])
+}
+
+
+let items: [TrashItem] =
+	[
+		.init(name: "Clean Beach", amount: 5),
+		.init(name: "Clean saturday", amount: 3),
+		.init(name: "Clean near cafe", amount: 7),
+		.init(name: "Clean event 1", amount: 2),
+		.init(name: "Clean event 2", amount: 4)
+		
+    ]
+
 
 private let mockTrashList = [
-    TrashListItem(imageName: "by_you", detailsImageName: "cameraboy", text: "Created by you", list: [
-        .init(name: "TestList", amount: 5)
-    ]),
+    TrashListItem(imageName: "by_you", detailsImageName: "cameraboy", text: "Created by you", list: Array(items.prefix(2))),
     TrashListItem(imageName: "voted", detailsImageName: "vote", text: "Voted by you", list: [
-        .init(name: "TestList", amount: 5)
+      items[2]
     ]),
-    TrashListItem(imageName: "bin", detailsImageName: "binboy", text: "Cleaned by you", list: [
-        .init(name: "TestList", amount: 5)
-    ]),
-    TrashListItem(imageName: "all_types", detailsImageName: "all_types", text: "All types", list: [
-        .init(name: "TestList", amount: 5)
-    ]),
+    TrashListItem(imageName: "bin", detailsImageName: "binboy", text: "Cleaned by you", list: items.suffix(2)),
+    TrashListItem(imageName: "all_types", detailsImageName: "all_types", text: "All types", list: items),
 ]
