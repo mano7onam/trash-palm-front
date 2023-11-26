@@ -161,9 +161,15 @@ struct CreateGarbageTagView: View {
                             .background(Color(hue: 0.26, saturation: 0.16, brightness: 0.91), in: RoundedRectangle(cornerRadius: 30))
                     }
                     .buttonStyle(.plain)
-                    Button {
-                        print("send")
-                    } label: {
+                    Button(action: {
+                        guard let lon = appState.selectedPlace?.coordinate.longitude,
+                              let lat = appState.selectedPlace?.coordinate.latitude else { return }
+                        let title = "New thrash"
+                        Task {
+                            let description = comment
+                            try await appState.backendService.createTagWithImages(lon: lon, lat: lat, title: title, description: description, prize: 0, images: selectedImages)
+                        }
+                    }) {
                         Text("Add")
                             .font(.alata(fixedSize: 18))
                             .frame(width: 136, height: 44)

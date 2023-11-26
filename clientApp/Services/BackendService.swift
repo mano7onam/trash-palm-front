@@ -6,6 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+enum ImageError: Error {
+    case encodingFailed
+}
 
 final class BackendService {
     private var email: String = "some@gmail.com"
@@ -32,7 +37,7 @@ final class BackendService {
         return data
     }
 
-    func createTag(lon: Double, lat: Double, title: String, description: String, owner: String, prize: Int) async throws {
+    func createTag(lon: Double, lat: Double, title: String, description: String, owner: String, prize: Int) async throws -> Data {
         let id = UUID()
         let url = URL(string: backendUrl + "/tags")!
 
@@ -47,7 +52,8 @@ final class BackendService {
         ]
         
         let jsonData = try JSONSerialization.data(withJSONObject: json)
-        let _ = try await postData(jsonData, to: url)
+        let data = try await postData(jsonData, to: url)
+        return data
     }
     
     func fetchData(from request: URLRequest) async throws -> Data {
@@ -89,7 +95,7 @@ final class BackendService {
         }
     }
     
-    func addPhotoToTag(id: String, photoData: String) async throws {
+    func addPhotoToTag(id: String, photoData: String) async throws -> String {
         let url = URL(string: backendUrl + "/\(id)/photos")!
 
         let json: [String: Any] = [
@@ -97,7 +103,8 @@ final class BackendService {
         ]
 
         let jsonData = try JSONSerialization.data(withJSONObject: json)
-        let _ = try await postData(jsonData, to: url)
+        let data = try await postData(jsonData, to: url)
+        return String(data: data, encoding: .utf8) ?? ""
     }
     
     func addCommentToTag(id: String, commentData: String) async throws {
@@ -166,6 +173,61 @@ final class BackendService {
 
         let jsonData = try JSONEncoder().encode(challenge)
         let _ = try await postData(jsonData, to: url)
+    }
+    
+    func createTagWithImages(lon: Double,
+                             lat: Double,
+                             title: String,
+                             description: String,
+                             prize: Int,
+                             images: [UIImage]) async throws {
+        let tagInfoData = try await createTag(lon: lon, lat:lat, title: title, description: description, owner: email, prize: prize)
+        let tagInfo = try JSONDecoder().decode(Tag.self, from: tagInfoData)
+        guard let uploadUrl = URL(string: "http://172.60.8.14:8081/upload") else { return }
+        let id = tagInfo.id
+        
+        var imageUrlPromises = [String]()
+            
+            for image in images {
+                let url = try await uploadImage(image, to: URL(string: "http://172.60.8.14:8081/upload")!)
+                imageUrlPromises.append(url)
+            }
+            
+        for url in imageUrlPromises {
+            try await addPhotoToTag(id: id, photoData: url)
+        }
+    }
+    
+    func uploadImage(_ image: UIImage, to url: URL) async throws -> String {
+        guard let imageData = image.pngData() else { throw ImageError.encodingFailed }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var body = Data()
+        body.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"file\"; filename=\"photo.png\"\r\n".data(using: .utf8)!)
+        body.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        body.append(imageData)
+        body.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+        
+        request.httpBody = body
+        
+        let (data, response) = try await URLSession.shared.upload(for: request, from: body)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw NetworkingError.badResponse
+        }
+        
+        struct Hobana: Decodable {
+            let url: String
+        }
+        
+        return try JSONDecoder().decode(Hobana.self, from: data).url
     }
     
 }
